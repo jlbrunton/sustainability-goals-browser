@@ -19,33 +19,90 @@
             line-height: 1.6;
         }
 
-        /* Grid System - 6 columns, 12pt gutters, 3pt baseline */
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 53, 62, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 0;
+            padding: 36pt;
+            max-width: 500px;
+            width: 90%;
+            border-top: 4pt solid #008768;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal h2 {
+            font-size: 21pt;
+            line-height: 24pt;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 18pt;
+            text-align: center;
+        }
+
+        .modal p {
+            font-size: 9pt;
+            line-height: 12pt;
+            color: #000000;
+            margin-bottom: 24pt;
+            text-align: center;
+        }
+
+        .modal-dropdown {
+            width: 100%;
+            padding: 12pt;
+            border: 2pt solid #008768;
+            background: white;
+            color: #000000;
+            font-size: 12pt;
+            line-height: 15pt;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 24pt;
+        }
+
+        .modal-dropdown:focus {
+            outline: 2pt solid #008768;
+            outline-offset: 2pt;
+        }
+
+        .modal-btn {
+            width: 100%;
+            padding: 12pt 24pt;
+            background: #008768;
+            color: white;
+            border: none;
+            font-size: 12pt;
+            line-height: 15pt;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .modal-btn:hover {
+            background: #00353e;
+        }
+
+        /* Grid System */
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 12pt;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 12pt;
+            padding: 24pt;
         }
 
-        .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .four-cols {
-            grid-column: span 4;
-        }
-
-        .two-cols {
-            grid-column: span 2;
-        }
-
-        .three-cols {
-            grid-column: span 3;
-        }
-
-        /* Typography following AECOM Sans specifications */
+        /* Typography */
         .heading-03 {
             font-size: 24pt;
             line-height: 27pt;
@@ -62,30 +119,6 @@
             margin-bottom: 15pt;
         }
 
-        .heading-06 {
-            font-size: 18pt;
-            line-height: 21pt;
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 12pt;
-        }
-
-        .heading-07 {
-            font-size: 15pt;
-            line-height: 18pt;
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 9pt;
-        }
-
-        .heading-08 {
-            font-size: 12pt;
-            line-height: 15pt;
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 9pt;
-        }
-
         .body-text {
             font-size: 9pt;
             line-height: 12pt;
@@ -93,16 +126,15 @@
             margin-bottom: 12pt;
         }
 
-        /* Main content area */
-        .main-content {
-            padding: 36pt 0;
+        .hidden {
+            display: none;
         }
 
         /* Filter section */
         .filters {
             background: #f6f6f6;
             padding: 24pt;
-            margin-bottom: 36pt;
+            margin-bottom: 24pt;
         }
 
         .filters-row {
@@ -175,20 +207,15 @@
             outline-offset: 1pt;
         }
 
-        /* Goals grid */
-        .goals-section {
-            margin-bottom: 36pt;
-        }
-
-        .goal-card {
+        /* Goal viewer */
+        .goal-viewer {
             background: white;
             border: 1pt solid #d0d0d0;
-            padding: 24pt;
-            margin-bottom: 12pt;
             position: relative;
+            min-height: 400px;
         }
 
-        .goal-card::before {
+        .goal-viewer::before {
             content: '';
             position: absolute;
             top: 0;
@@ -198,23 +225,63 @@
             background: #008768;
         }
 
-        .goal-header {
-            margin-bottom: 18pt;
+        .goal-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18pt 24pt;
+            background: #f6f6f6;
+            border-bottom: 1pt solid #d0d0d0;
+        }
+
+        .nav-btn {
+            padding: 9pt 15pt;
+            background: #008768;
+            color: white;
+            border: none;
+            font-size: 12pt;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6pt;
+        }
+
+        .nav-btn:hover {
+            background: #00353e;
+        }
+
+        .nav-btn:disabled {
+            background: #d0d0d0;
+            color: #646363;
+            cursor: not-allowed;
+        }
+
+        .goal-counter {
+            font-size: 12pt;
+            line-height: 15pt;
+            font-weight: bold;
+            color: #00353e;
+        }
+
+        .goal-content {
+            padding: 24pt;
         }
 
         .goal-title {
-            font-size: 15pt;
-            line-height: 18pt;
+            font-size: 18pt;
+            line-height: 21pt;
             font-weight: bold;
             color: #000000;
-            margin-bottom: 9pt;
+            margin-bottom: 12pt;
         }
 
         .goal-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 6pt;
-            margin-bottom: 12pt;
+            margin-bottom: 18pt;
         }
 
         .meta-tag {
@@ -245,16 +312,16 @@
         }
 
         .goal-description {
-            font-size: 9pt;
-            line-height: 12pt;
+            font-size: 10pt;
+            line-height: 15pt;
             color: #000000;
-            margin-bottom: 15pt;
+            margin-bottom: 18pt;
         }
 
         .goal-bullets {
             list-style: none;
             padding: 0;
-            margin: 12pt 0;
+            margin: 0 0 24pt 0;
         }
 
         .goal-bullets li {
@@ -298,10 +365,25 @@
             color: #000000;
         }
 
+        .no-goals {
+            text-align: center;
+            padding: 72pt;
+            color: #646363;
+        }
+
+        .no-goals h3 {
+            font-size: 18pt;
+            line-height: 21pt;
+            font-weight: bold;
+            margin-bottom: 12pt;
+            color: #000000;
+        }
+
         /* Resources section */
         .resources-section {
             background: #f6f6f6;
-            padding: 36pt 24pt;
+            padding: 24pt;
+            margin-top: 36pt;
             border-left: 3pt solid #aecc53;
         }
 
@@ -309,7 +391,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250pt, 1fr));
             gap: 18pt;
-            margin-top: 24pt;
+            margin-top: 18pt;
         }
 
         .resource-card {
@@ -332,31 +414,15 @@
             color: #000000;
         }
 
-        .no-results {
-            text-align: center;
-            padding: 72pt 24pt;
-            color: #646363;
-        }
-
-        .no-results h3 {
-            font-size: 18pt;
-            line-height: 21pt;
-            font-weight: bold;
-            margin-bottom: 12pt;
-            color: #000000;
-        }
-
-        .no-results p {
-            font-size: 9pt;
-            line-height: 12pt;
-        }
-
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr;
-                padding: 0 6pt;
-                gap: 6pt;
+                padding: 12pt;
+            }
+            
+            .modal {
+                padding: 24pt;
+                margin: 12pt;
             }
             
             .filters-row {
@@ -368,20 +434,25 @@
                 margin-bottom: 18pt;
             }
             
-            .filter-group:last-child {
-                margin-bottom: 0;
-            }
-            
             .filters {
                 padding: 18pt;
             }
             
-            .goal-card {
+            .goal-content {
                 padding: 18pt;
             }
             
+            .goal-navigation {
+                padding: 12pt 18pt;
+            }
+            
+            .nav-btn {
+                padding: 6pt 12pt;
+                font-size: 10pt;
+            }
+            
             .resources-section {
-                padding: 24pt 18pt;
+                padding: 18pt;
             }
             
             .resources-grid {
@@ -389,79 +460,103 @@
                 gap: 12pt;
             }
         }
-
-        /* Print styles */
-        @media print {
-            .copy-btn {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="container main-content">
-        <div class="full-width">
-            <div class="filters">
-                <div class="filters-row">
-                    <div class="filter-group">
-                        <label class="filter-label">Goal Type</label>
-                        <div class="filter-buttons">
-                            <button class="filter-btn active" data-filter="type" data-value="all">All Goals</button>
-                            <button class="filter-btn" data-filter="type" data-value="basic">Basic Goals</button>
-                            <button class="filter-btn" data-filter="type" data-value="detailed">Detailed Goals</button>
-                        </div>
-                    </div>
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal-overlay">
+        <div class="modal">
+            <h2>UK&I Structural Sustainability Goals</h2>
+            <p>Welcome! This tool helps you explore sustainability goals aligned with UK Structural Engineers Declare commitments. To get started, please select your current job role to see the most relevant goals for your level.</p>
+            
+            <label for="modalRoleSelect" class="filter-label">What is your job role?</label>
+            <select id="modalRoleSelect" class="modal-dropdown">
+                <option value="">Please select your role...</option>
+                <option value="graduate">Graduate Engineer</option>
+                <option value="assistant">Assistant Engineer</option>
+                <option value="engineer">Engineer</option>
+                <option value="senior">Senior Engineer</option>
+                <option value="principal">Principal Engineer</option>
+                <option value="associate">Associate</option>
+                <option value="director">Director</option>
+                <option value="technician">Technician</option>
+                <option value="all">Show me all roles</option>
+            </select>
+            
+            <button id="startBtn" class="modal-btn" disabled>Start exploring goals</button>
+        </div>
+    </div>
 
-                    <div class="filter-group">
-                        <label class="filter-label" for="roleSelect">Job Role</label>
-                        <select id="roleSelect" class="role-dropdown">
-                            <option value="all">All Roles</option>
-                            <option value="graduate">Graduate Engineer</option>
-                            <option value="assistant">Assistant Engineer</option>
-                            <option value="engineer">Engineer</option>
-                            <option value="senior">Senior Engineer</option>
-                            <option value="principal">Principal Engineer</option>
-                            <option value="associate">Associate</option>
-                            <option value="director">Director</option>
-                            <option value="technician">Technician</option>
-                            <option value="bim">BIM Modeller</option>
-                        </select>
+    <!-- Main Content -->
+    <div id="mainContent" class="container hidden">
+        <div class="filters">
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label class="filter-label">Goal Type</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="type" data-value="all">All Goals</button>
+                        <button class="filter-btn" data-filter="type" data-value="basic">Basic Goals</button>
+                        <button class="filter-btn" data-filter="type" data-value="detailed">Detailed Goals</button>
                     </div>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label" for="roleSelect">Job Role</label>
+                    <select id="roleSelect" class="role-dropdown">
+                        <option value="all">All Roles</option>
+                        <option value="graduate">Graduate Engineer</option>
+                        <option value="assistant">Assistant Engineer</option>
+                        <option value="engineer">Engineer</option>
+                        <option value="senior">Senior Engineer</option>
+                        <option value="principal">Principal Engineer</option>
+                        <option value="associate">Associate</option>
+                        <option value="director">Director</option>
+                        <option value="technician">Technician</option>
+                    </select>
                 </div>
             </div>
         </div>
 
-        <div class="full-width goals-section">
-            <div id="goalsGrid">
-                <!-- Goals will be populated by JavaScript -->
+        <div class="goal-viewer">
+            <div class="goal-navigation">
+                <button id="prevBtn" class="nav-btn">
+                    ← Previous
+                </button>
+                <div class="goal-counter">
+                    <span id="currentGoal">1</span> of <span id="totalGoals">0</span>
+                </div>
+                <button id="nextBtn" class="nav-btn">
+                    Next →
+                </button>
+            </div>
+
+            <div id="goalContent" class="goal-content">
+                <!-- Goal content will be populated by JavaScript -->
             </div>
         </div>
 
-        <div class="full-width">
-            <div class="resources-section">
-                <h2 class="heading-05">Available Resources</h2>
-                <div class="resources-grid">
-                    <div class="resource-card">
-                        <h4>Structural Sustainability SharePoint</h4>
-                        <p>Comprehensive knowledge hub with ScopeX decarbonisation guidance, Eco.Zero tools, project templates, CPD opportunities, and monthly newsletters.</p>
-                    </div>
-                    <div class="resource-card">
-                        <h4>Eco.Zero™ Tool Suite</h4>
-                        <p>Optioneering Tool for early project stages (RIBA 0/1) and Measure Tool for automated carbon tracking from Revit models.</p>
-                    </div>
-                    <div class="resource-card">
-                        <h4>Structural Sustainability Team</h4>
-                        <p>Direct consultation with Jack Brunton, Ioana Price, and Megan Newson for expert guidance across all project stages.</p>
-                    </div>
+        <div class="resources-section">
+            <h2 class="heading-05">Available Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>Structural Sustainability SharePoint</h4>
+                    <p>Comprehensive knowledge hub with ScopeX decarbonisation guidance, Eco.Zero tools, project templates, CPD opportunities, and monthly newsletters.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Eco.Zero™ Tool Suite</h4>
+                    <p>Optioneering Tool for early project stages (RIBA 0/1) and Measure Tool for automated carbon tracking from Revit models.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Structural Sustainability Team</h4>
+                    <p>Direct consultation with Jack Brunton, Ioana Price, and Megan Newson for expert guidance across all project stages.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Goals data based on the document
+        // Goals data
         const goalsData = [
-            // Basic Goals
             {
                 id: 1,
                 type: 'basic',
@@ -488,7 +583,6 @@
                     'Consult with the Structural Sustainability Team to seek feedback and improvement on sustainability approaches and access expertise in Eco.Zero tools and sustainable design methods'
                 ]
             },
-            // Detailed Goals
             {
                 id: 3,
                 type: 'detailed',
@@ -504,7 +598,7 @@
             {
                 id: 4,
                 type: 'detailed',
-                role: 'bim',
+                role: 'technician',
                 category: 'Delivery & Operational Excellence',
                 title: 'Eco.Zero Measure Excellence',
                 description: 'Master Eco.Zero protocols for accurate carbon data delivery.',
@@ -592,48 +686,90 @@
             type: 'all',
             role: 'all'
         };
+        let filteredGoals = [];
+        let currentGoalIndex = 0;
 
-        function renderGoals() {
-            const grid = document.getElementById('goalsGrid');
-            const filteredGoals = goalsData.filter(goal => {
+        // Modal functionality
+        const modalRoleSelect = document.getElementById('modalRoleSelect');
+        const startBtn = document.getElementById('startBtn');
+        const welcomeModal = document.getElementById('welcomeModal');
+        const mainContent = document.getElementById('mainContent');
+
+        modalRoleSelect.addEventListener('change', function() {
+            startBtn.disabled = this.value === '';
+        });
+
+        startBtn.addEventListener('click', function() {
+            const selectedRole = modalRoleSelect.value;
+            currentFilters.role = selectedRole;
+            document.getElementById('roleSelect').value = selectedRole;
+            
+            welcomeModal.classList.add('hidden');
+            mainContent.classList.remove('hidden');
+            
+            updateFilteredGoals();
+            renderCurrentGoal();
+        });
+
+        // Main functionality
+        function updateFilteredGoals() {
+            filteredGoals = goalsData.filter(goal => {
                 const typeMatch = currentFilters.type === 'all' || goal.type === currentFilters.type;
                 const roleMatch = currentFilters.role === 'all' || goal.role === currentFilters.role || goal.role === 'all';
                 return typeMatch && roleMatch;
             });
+            
+            currentGoalIndex = 0;
+            updateNavigation();
+        }
 
+        function updateNavigation() {
+            const totalGoalsEl = document.getElementById('totalGoals');
+            const currentGoalEl = document.getElementById('currentGoal');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            totalGoalsEl.textContent = filteredGoals.length;
+            currentGoalEl.textContent = filteredGoals.length > 0 ? currentGoalIndex + 1 : 0;
+
+            prevBtn.disabled = currentGoalIndex === 0;
+            nextBtn.disabled = currentGoalIndex >= filteredGoals.length - 1;
+        }
+
+        function renderCurrentGoal() {
+            const goalContent = document.getElementById('goalContent');
+            
             if (filteredGoals.length === 0) {
-                grid.innerHTML = `
-                    <div class="no-results">
+                goalContent.innerHTML = `
+                    <div class="no-goals">
                         <h3>No goals found</h3>
                         <p>Try adjusting your filters to see more goals.</p>
                     </div>
                 `;
+                updateNavigation();
                 return;
             }
 
-            grid.innerHTML = filteredGoals.map(goal => `
-                <div class="goal-card">
-                    <div class="goal-header">
-                        <h3 class="goal-title">${goal.title}</h3>
-                        <div class="goal-meta">
-                            <span class="meta-tag type">${goal.type === 'basic' ? 'Basic' : 'Detailed'}</span>
-                            <span class="meta-tag job-level">${goal.role === 'all' ? 'All Roles' : formatRole(goal.role)}</span>
-                            <span class="meta-tag category">${goal.category}</span>
-                        </div>
-                    </div>
-                    <div class="goal-description">
-                        <p class="body-text">${goal.description}</p>
-                        <ul class="goal-bullets">
-                            ${goal.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
-                        </ul>
-                        <div style="clear: both;">
-                            <button class="copy-btn" onclick="copyGoal(${goal.id})">
-                                Copy to clipboard
-                            </button>
-                        </div>
-                    </div>
+            const goal = filteredGoals[currentGoalIndex];
+            goalContent.innerHTML = `
+                <h3 class="goal-title">${goal.title}</h3>
+                <div class="goal-meta">
+                    <span class="meta-tag type">${goal.type === 'basic' ? 'Basic' : 'Detailed'}</span>
+                    <span class="meta-tag job-level">${goal.role === 'all' ? 'All Roles' : formatRole(goal.role)}</span>
+                    <span class="meta-tag category">${goal.category}</span>
                 </div>
-            `).join('');
+                <p class="goal-description">${goal.description}</p>
+                <ul class="goal-bullets">
+                    ${goal.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                </ul>
+                <div style="clear: both;">
+                    <button class="copy-btn" onclick="copyGoal(${goal.id})">
+                        Copy to clipboard
+                    </button>
+                </div>
+            `;
+            
+            updateNavigation();
         }
 
         function formatRole(role) {
@@ -645,8 +781,7 @@
                 'principal': 'Principal Engineer',
                 'associate': 'Associate',
                 'director': 'Director',
-                'technician': 'Technician',
-                'bim': 'BIM Modeller'
+                'technician': 'Technician'
             };
             return roleMap[role] || role;
         }
@@ -671,7 +806,6 @@ Source: UK&I Structural Sustainability Goals - Supporting UK Structural Engineer
             navigator.clipboard.writeText(text).then(() => {
                 showCopyFeedback(event.target);
             }).catch(err => {
-                // Fallback for older browsers
                 const textArea = document.createElement('textarea');
                 textArea.value = text;
                 document.body.appendChild(textArea);
@@ -695,32 +829,55 @@ Source: UK&I Structural Sustainability Goals - Supporting UK Structural Engineer
             }, 2000);
         }
 
-        // Event listeners
+        // Navigation event listeners
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentGoalIndex > 0) {
+                currentGoalIndex--;
+                renderCurrentGoal();
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentGoalIndex < filteredGoals.length - 1) {
+                currentGoalIndex++;
+                renderCurrentGoal();
+            }
+        });
+
+        // Filter event listeners
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('filter-btn')) {
                 const filterType = e.target.dataset.filter;
                 const filterValue = e.target.dataset.value;
                 
-                // Update active state
                 const siblings = e.target.parentElement.querySelectorAll('.filter-btn');
                 siblings.forEach(btn => btn.classList.remove('active'));
                 e.target.classList.add('active');
                 
-                // Update filters
                 currentFilters[filterType] = filterValue;
-                renderGoals();
+                updateFilteredGoals();
+                renderCurrentGoal();
             }
         });
 
-        document.addEventListener('change', (e) => {
-            if (e.target.id === 'roleSelect') {
-                currentFilters.role = e.target.value;
-                renderGoals();
-            }
+        document.getElementById('roleSelect').addEventListener('change', (e) => {
+            currentFilters.role = e.target.value;
+            updateFilteredGoals();
+            renderCurrentGoal();
         });
 
-        // Initial render
-        renderGoals();
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (welcomeModal.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft' && currentGoalIndex > 0) {
+                    currentGoalIndex--;
+                    renderCurrentGoal();
+                } else if (e.key === 'ArrowRight' && currentGoalIndex < filteredGoals.length - 1) {
+                    currentGoalIndex++;
+                    renderCurrentGoal();
+                }
+            }
+        });
     </script>
 </body>
 </html>
