@@ -477,7 +477,7 @@
                 <option value="engineer">Engineer</option>
                 <option value="senior">Senior Engineer</option>
                 <option value="principal">Principal Engineer</option>
-                <option value="associate">Associate Director</option>
+                <option value="associate">Associate</option>
                 <option value="director">Director</option>
                 <option value="technician">Technician</option>
                 <option value="all">Show me all roles</option>
@@ -495,7 +495,7 @@
                     <label class="filter-label">Goal Type</label>
                     <div class="filter-buttons">
                         <button class="filter-btn active" data-filter="type" data-value="all">All Goals</button>
-                        <button class="filter-btn" data-filter="type" data-value="simple">Simple Goals</button>
+                        <button class="filter-btn" data-filter="type" data-value="basic">Basic Goals</button>
                         <button class="filter-btn" data-filter="type" data-value="detailed">Detailed Goals</button>
                     </div>
                 </div>
@@ -509,7 +509,7 @@
                         <option value="engineer">Engineer</option>
                         <option value="senior">Senior Engineer</option>
                         <option value="principal">Principal Engineer</option>
-                        <option value="associate">Associate Director</option>
+                        <option value="associate">Associate</option>
                         <option value="director">Director</option>
                         <option value="technician">Technician</option>
                     </select>
@@ -555,10 +555,8 @@
     </div>
 
     <script>
-        // Goals data - Updated with director and graduate feedback
-        const goalsData = [
-            // Simple Goals
-            {
+        // Goals data
+        const goalsData = [            {
                 id: 1,
                 type: 'simple',
                 role: 'all',
@@ -938,4 +936,207 @@
                 bullets: [
                     'Maintain accurate model data and generate regular carbon reports using Eco.Zero Measure',
                     'Contribute to material efficiency studies through detailed quantity take-offs',
-                    'Participate in project sustainability reviews providing technical input'
+                    'Participate in project sustainability reviews providing technical input'       
+                ]
+            }
+        ];
+
+        let currentFilters = {
+            type: 'all',
+            role: 'all'
+        };
+        let filteredGoals = [];
+        let currentGoalIndex = 0;
+
+        // Modal functionality
+        const modalRoleSelect = document.getElementById('modalRoleSelect');
+        const startBtn = document.getElementById('startBtn');
+        const welcomeModal = document.getElementById('welcomeModal');
+        const mainContent = document.getElementById('mainContent');
+
+        modalRoleSelect.addEventListener('change', function() {
+            startBtn.disabled = this.value === '';
+        });
+
+        startBtn.addEventListener('click', function() {
+            const selectedRole = modalRoleSelect.value;
+            currentFilters.role = selectedRole;
+            document.getElementById('roleSelect').value = selectedRole;
+            
+            welcomeModal.classList.add('hidden');
+            mainContent.classList.remove('hidden');
+            
+            updateFilteredGoals();
+            renderCurrentGoal();
+        });
+
+        // Main functionality
+        function updateFilteredGoals() {
+            filteredGoals = goalsData.filter(goal => {
+                const typeMatch = currentFilters.type === 'all' || goal.type === currentFilters.type;
+                const roleMatch = currentFilters.role === 'all' || goal.role === currentFilters.role || goal.role === 'all';
+                return typeMatch && roleMatch;
+            });
+            
+            currentGoalIndex = 0;
+            updateNavigation();
+        }
+
+        function updateNavigation() {
+            const totalGoalsEl = document.getElementById('totalGoals');
+            const currentGoalEl = document.getElementById('currentGoal');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            totalGoalsEl.textContent = filteredGoals.length;
+            currentGoalEl.textContent = filteredGoals.length > 0 ? currentGoalIndex + 1 : 0;
+
+            prevBtn.disabled = currentGoalIndex === 0;
+            nextBtn.disabled = currentGoalIndex >= filteredGoals.length - 1;
+        }
+
+        function renderCurrentGoal() {
+            const goalContent = document.getElementById('goalContent');
+            
+            if (filteredGoals.length === 0) {
+                goalContent.innerHTML = `
+                    <div class="no-goals">
+                        <h3>No goals found</h3>
+                        <p>Try adjusting your filters to see more goals.</p>
+                    </div>
+                `;
+                updateNavigation();
+                return;
+            }
+
+            const goal = filteredGoals[currentGoalIndex];
+            goalContent.innerHTML = `
+                <h3 class="goal-title">${goal.title}</h3>
+                <div class="goal-meta">
+                    <span class="meta-tag type">${goal.type === 'basic' ? 'Basic' : 'Detailed'}</span>
+                    <span class="meta-tag job-level">${goal.role === 'all' ? 'All Roles' : formatRole(goal.role)}</span>
+                    <span class="meta-tag category">${goal.category}</span>
+                </div>
+                <p class="goal-description">${goal.description}</p>
+                <ul class="goal-bullets">
+                    ${goal.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                </ul>
+                <div style="clear: both;">
+                    <button class="copy-btn" onclick="copyGoal(${goal.id})">
+                        Copy to clipboard
+                    </button>
+                </div>
+            `;
+            
+            updateNavigation();
+        }
+
+        function formatRole(role) {
+            const roleMap = {
+                'graduate': 'Graduate Engineer',
+                'assistant': 'Assistant Engineer',
+                'engineer': 'Engineer',
+                'senior': 'Senior Engineer',
+                'principal': 'Principal Engineer',
+                'associate': 'Associate',
+                'director': 'Director',
+                'technician': 'Technician'
+            };
+            return roleMap[role] || role;
+        }
+
+        function copyGoal(goalId) {
+            const goal = goalsData.find(g => g.id === goalId);
+            if (!goal) return;
+
+            const text = `${goal.title}
+
+Category: ${goal.category}
+Type: ${goal.type === 'basic' ? 'Basic Goal' : 'Detailed Goal'}
+Role: ${goal.role === 'all' ? 'All Roles' : formatRole(goal.role)}
+
+Description: ${goal.description}
+
+Success Measures:
+${goal.bullets.map(bullet => `– ${bullet}`).join('\n')}
+
+Source: UK&I Structural Sustainability Goals - Supporting UK Structural Engineers Declare commitments`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                showCopyFeedback(event.target);
+            }).catch(err => {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showCopyFeedback(event.target);
+            });
+        }
+
+        function showCopyFeedback(btn) {
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Copied';
+            btn.style.background = '#aecc53';
+            btn.style.color = '#000000';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '#e52713';
+                btn.style.color = 'white';
+            }, 2000);
+        }
+
+        // Navigation event listeners
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentGoalIndex > 0) {
+                currentGoalIndex--;
+                renderCurrentGoal();
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentGoalIndex < filteredGoals.length - 1) {
+                currentGoalIndex++;
+                renderCurrentGoal();
+            }
+        });
+
+        // Filter event listeners
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                const filterType = e.target.dataset.filter;
+                const filterValue = e.target.dataset.value;
+                
+                const siblings = e.target.parentElement.querySelectorAll('.filter-btn');
+                siblings.forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                currentFilters[filterType] = filterValue;
+                updateFilteredGoals();
+                renderCurrentGoal();
+            }
+        });
+
+        document.getElementById('roleSelect').addEventListener('change', (e) => {
+            currentFilters.role = e.target.value;
+            updateFilteredGoals();
+            renderCurrentGoal();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (welcomeModal.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft' && currentGoalIndex > 0) {
+                    currentGoalIndex--;
+                    renderCurrentGoal();
+                } else if (e.key === 'ArrowRight' && currentGoalIndex < filteredGoals.length - 1) {
+                    currentGoalIndex++;
+                    renderCurrentGoal();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
