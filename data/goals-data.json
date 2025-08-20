@@ -1,0 +1,382 @@
+[
+    {
+        "id": 1,
+        "type": "simple",
+        "role": "all",
+        "category": "Clients & Growth",
+        "title": "UK SED Commitments",
+        "description": "Uphold signatory commitments by actively promoting climate emergency awareness and sustainable design principles.",
+        "bullets": [
+            "Engage with the Structural Sustainability Team for guidance on implementing UK SED principles",
+            "Embed sustainability thinking as a core consideration in all project planning and delivery decisions",
+            "Track progress through consistent application of sustainable design principles"
+        ]
+    },
+    {
+        "id": 2,
+        "type": "simple",
+        "role": "all",
+        "category": "Delivery & Operational Excellence",
+        "title": "Embodied Carbon Tracking",
+        "description": "Track embodied carbon from early project stages and continue throughout project duration.",
+        "bullets": [
+            "Track embodied carbon from RIBA 0/1 using appropriate tools (Eco.Zero suite where applicable, alternative methods for other structure types)",
+            "Implement systematic carbon assessment protocols for all structural projects",
+            "For projects above threshold value, conduct mandatory sustainability reviews with same rigour as calculation checks",
+            "Apply Eco.Zero tools where appropriate for early-stage optioneering and regular carbon tracking"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "simple",
+        "role": "all",
+        "category": "Delivery & Operational Excellence",
+        "title": "Carbon Reduction",
+        "description": "Actively pursue carbon reduction opportunities in all structural designs.",
+        "bullets": [
+            "Optimise materials, structural systems, and lean design principles",
+            "Document carbon reduction strategies and achieved savings for each project",
+            "Share successful approaches through case studies and team knowledge sharing"
+        ]
+    },
+    {
+        "id": 4,
+        "type": "simple",
+        "role": "all",
+        "category": "People & Culture",
+        "title": "Knowledge Sharing Platform",
+        "description": "Engage with and contribute to sustainability knowledge sharing.",
+        "bullets": [
+            "Regular SharePoint engagement including newsletters and technical resources",
+            "Contribute project experiences through case studies and technical insights",
+            "Organise or participate in lunchtime talks sharing interesting sustainability approaches",
+            "Collaborate with Structural Sustainability Team for guidance and innovation"
+        ]
+    },
+    {
+        "id": 5,
+        "type": "simple",
+        "role": "all",
+        "category": "Development",
+        "title": "Continuous Development",
+        "description": "Stay current with sustainability developments and best practices.",
+        "bullets": [
+            "Participate in training on sustainable design and carbon assessment",
+            "Attend external talks and events with IStructE and other professional bodies",
+            "Maintain awareness of industry sustainability developments",
+            "Seek feedback from Structural Sustainability Team on approaches"
+        ]
+    },
+    {
+        "id": 6,
+        "type": "detailed",
+        "role": "graduate",
+        "category": "Development",
+        "title": "Foundational Sustainability Competency",
+        "description": "Build core skills in carbon assessment and sustainable design principles.",
+        "bullets": [
+            "Complete Eco.Zero tool training and demonstrate proficiency by Q2 FY26",
+            "Track embodied carbon on all assigned projects using appropriate methods from RIBA 0/1 onwards",
+            "Develop understanding of UK SED commitments through team engagement"
+        ]
+    },
+    {
+        "id": 7,
+        "type": "detailed",
+        "role": "graduate",
+        "category": "Delivery & Operational Excellence",
+        "title": "Sustainable Design Integration",
+        "description": "Support project teams in implementing sustainable design principles.",
+        "bullets": [
+            "Conduct material efficiency reviews and carbon assessments using Eco.Zero tools",
+            "Participate in sustainability reviews, challenging assumptions and proposing alternatives",
+            "Attend external IStructE sustainability events and share learnings with team through presentations"
+        ]
+    },
+    {
+        "id": 8,
+        "type": "detailed",
+        "role": "graduate",
+        "category": "People & Culture",
+        "title": "Knowledge Sharing & Collaboration",
+        "description": "Contribute to team knowledge and learning.",
+        "bullets": [
+            "Author at least one SharePoint newsletter article by Q4 FY26",
+            "Participate in team sustainability discussions and seek mentorship",
+            "Present sustainability case studies from projects in lunchtime talks"
+        ]
+    },
+    {
+        "id": 9,
+        "type": "detailed",
+        "role": "assistant",
+        "category": "Delivery & Operational Excellence",
+        "title": "Carbon Assessment Proficiency",
+        "description": "Lead carbon assessments and tracking on assigned projects.",
+        "bullets": [
+            "Lead carbon assessments achieving consistent tracking throughout design stages",
+            "Ensure comprehensive carbon documentation from RIBA 0/1 through construction",
+            "Identify minimum 3 carbon reduction opportunities per project by Q3 FY26"
+        ]
+    },
+    {
+        "id": 10,
+        "type": "detailed",
+        "role": "assistant",
+        "category": "Development",
+        "title": "Advanced Sustainability Skills",
+        "description": "Expand capability in circular design and emerging practices.",
+        "bullets": [
+            "Develop expertise in existing structure assessment and material reuse strategies",
+            "Complete external CPD courses on embodied carbon assessment",
+            "Participate in industry forums and share insights through team presentations"
+        ]
+    },
+    {
+        "id": 11,
+        "type": "detailed",
+        "role": "assistant",
+        "category": "Clients & Growth",
+        "title": "Client Engagement Support",
+        "description": "Support senior engineers in client sustainability presentations.",
+        "bullets": [
+            "Prepare Eco.Zero optioneering studies demonstrating carbon and cost implications",
+            "Contribute to sustainability sections of proposals and bids",
+            "Track successful bid outcomes and client feedback"
+        ]
+    },
+    {
+        "id": 12,
+        "type": "detailed",
+        "role": "engineer",
+        "category": "Delivery & Operational Excellence",
+        "title": "Project Sustainability Leadership",
+        "description": "Take ownership of sustainability deliverables on multiple projects.",
+        "bullets": [
+            "Embed UK SED principles achieving minimum 20% embodied carbon savings",
+            "Lead mandatory sustainability reviews with same rigour as calculation checks",
+            "Establish carbon baselines early (RIBA 0/1) and track performance through design stages"
+        ]
+    },
+    {
+        "id": 13,
+        "type": "detailed",
+        "role": "engineer",
+        "category": "People & Culture",
+        "title": "Team Capability Building",
+        "description": "Mentor team members and lead knowledge sharing.",
+        "bullets": [
+            "Mentor junior team members in sustainable design and Eco.Zero tools",
+            "Lead monthly sustainability discussions sharing project learnings",
+            "Organise quarterly lunchtime talks with internal and external speakers"
+        ]
+    },
+    {
+        "id": 14,
+        "type": "detailed",
+        "role": "engineer",
+        "category": "Development",
+        "title": "Technical Excellence",
+        "description": "Develop specialist expertise in low-carbon structural systems.",
+        "bullets": [
+            "Research and apply low-carbon structural systems innovations",
+            "Complete advanced training in whole-life carbon assessment",
+            "Attend and present at external industry sustainability conferences"
+        ]
+    },
+    {
+        "id": 15,
+        "type": "detailed",
+        "role": "senior",
+        "category": "Delivery & Operational Excellence",
+        "title": "Sustainability Integration Leadership",
+        "description": "Ensure comprehensive carbon tracking across project portfolio.",
+        "bullets": [
+            "Achieve portfolio-wide 25% embodied carbon reductions by Q4 FY26",
+            "Champion early-stage intervention using Eco.Zero Optioneering from RIBA 0/1",
+            "Establish protocols ensuring sustainability treated with same rigour as calculations"
+        ]
+    },
+    {
+        "id": 16,
+        "type": "detailed",
+        "role": "senior",
+        "category": "Clients & Growth",
+        "title": "Market Positioning",
+        "description": "Lead client engagement on sustainability topics.",
+        "bullets": [
+            "Present Eco.Zero capabilities at 3+ client events",
+            "Develop sustainability-focused service offerings",
+            "Advocate for mandatory sustainability reviews in client negotiations"
+        ]
+    },
+    {
+        "id": 17,
+        "type": "detailed",
+        "role": "senior",
+        "category": "People & Culture",
+        "title": "Cultural Transformation",
+        "description": "Drive team-wide adoption of sustainable design as standard practice.",
+        "bullets": [
+            "Achieve 100% project compliance with carbon tracking requirements from RIBA 0/1",
+            "Establish regular engagement with Structural Sustainability Team",
+            "Create programme of external speaker events and sustainable project site visits"
+        ]
+    },
+    {
+        "id": 18,
+        "type": "detailed",
+        "role": "principal",
+        "category": "Delivery & Operational Excellence",
+        "title": "Technical Excellence & Innovation",
+        "description": "Develop strategies to influence architectural proposals with low-carbon solutions.",
+        "bullets": [
+            "Apply Eco.Zero tools to influence building briefs and material selection from RIBA 0/1",
+            "Champion circular design principles and existing asset reuse",
+            "Drive implementation of mandatory sustainability reviews for major projects"
+        ]
+    },
+    {
+        "id": 19,
+        "type": "detailed",
+        "role": "principal",
+        "category": "Clients & Growth",
+        "title": "Strategic Client Partnerships",
+        "description": "Establish partnerships to embed sustainability in client programmes.",
+        "bullets": [
+            "Establish strategic partnerships with 3+ key clients by Q4 FY26",
+            "Develop value propositions quantifying carbon and cost benefits",
+            "Position sustainability reviews as essential project deliverable in fee proposals"
+        ]
+    },
+    {
+        "id": 20,
+        "type": "detailed",
+        "role": "principal",
+        "category": "Development",
+        "title": "Thought Leadership",
+        "description": "Establish personal and AECOM brand as sustainability thought leaders.",
+        "bullets": [
+            "Publish 2+ technical papers on structural sustainability by Q4 FY26",
+            "Present at national/international conferences on Eco.Zero applications",
+            "Participate in IStructE sustainability committees and share insights with team"
+        ]
+    },
+    {
+        "id": 21,
+        "type": "detailed",
+        "role": "associate",
+        "category": "Clients & Growth",
+        "title": "Market Leadership",
+        "description": "Position AECOM as market leader in structural sustainability.",
+        "bullets": [
+            "Achieve 30% increase in sustainability-led project wins by Q4 FY26",
+            "Deliver client workshops showcasing Eco.Zero capabilities and carbon strategies",
+            "Establish sustainability review requirements in framework agreements"
+        ]
+    },
+    {
+        "id": 22,
+        "type": "detailed",
+        "role": "associate",
+        "category": "People & Culture",
+        "title": "Organisational Transformation",
+        "description": "Lead cultural shift towards embedded sustainability.",
+        "bullets": [
+            "Establish sustainable design KPIs for all team members",
+            "Champion UK SED commitments through visible leadership and communication",
+            "Institute regular sustainability training including external speakers and site visits"
+        ]
+    },
+    {
+        "id": 23,
+        "type": "detailed",
+        "role": "associate",
+        "category": "Delivery & Operational Excellence",
+        "title": "Portfolio Excellence",
+        "description": "Achieve portfolio-wide carbon reduction targets.",
+        "bullets": [
+            "Achieve 30% embodied carbon reduction across portfolio by Q4 FY26",
+            "Establish QA protocols ensuring sustainability standards equal technical standards",
+            "Implement mandatory sustainability review gates with formal sign-off requirements"
+        ]
+    },
+    {
+        "id": 24,
+        "type": "detailed",
+        "role": "director",
+        "category": "Clients & Growth",
+        "title": "Strategic Market Positioning",
+        "description": "Shape regional market through sustainability thought leadership.",
+        "bullets": [
+            "Secure 3+ strategic partnerships focused on net-zero commitments by Q4 FY26",
+            "Lead industry collaboration on policy development and standards",
+            "Advocate at board level for mandatory sustainability reviews on all major projects"
+        ]
+    },
+    {
+        "id": 25,
+        "type": "detailed",
+        "role": "director",
+        "category": "People & Culture",
+        "title": "Sustainability Leadership Culture",
+        "description": "Embed sustainability as core organisational value.",
+        "bullets": [
+            "Establish sustainability as top-3 organisational priority through cultural assessment",
+            "Invest in tools, training, and thought leadership for market differentiation",
+            "Create comprehensive professional development pathway including external qualifications"
+        ]
+    },
+    {
+        "id": 26,
+        "type": "detailed",
+        "role": "director",
+        "category": "Delivery & Operational Excellence",
+        "title": "Excellence Standards",
+        "description": "Set ambitious regional targets for embodied carbon reduction.",
+        "bullets": [
+            "Demonstrate leadership through published results and industry case studies",
+            "Establish AECOM as exemplar for sustainable structural engineering practice",
+            "Ensure sustainability carries equal weight in all project governance and reviews"
+        ]
+    },
+    {
+        "id": 27,
+        "type": "detailed",
+        "role": "technician",
+        "category": "Development",
+        "title": "Technical Skills Development",
+        "description": "Build competency in sustainability tools and carbon assessment.",
+        "bullets": [
+            "Develop proficiency in Eco.Zero Measure for Revit data extraction by Q3 FY26",
+            "Build competency in sustainable material specifications and carbon factors",
+            "Support comprehensive carbon tracking documentation from early stages through construction"
+        ]
+    },
+    {
+        "id": 28,
+        "type": "detailed",
+        "role": "technician",
+        "category": "Delivery & Operational Excellence",
+        "title": "Sustainability Integration",
+        "description": "Support engineering teams in carbon assessment deliverables.",
+        "bullets": [
+            "Maintain accurate model data and generate regular carbon reports using Eco.Zero Measure",
+            "Contribute to material efficiency studies through detailed quantity take-offs",
+            "Participate in project sustainability reviews providing technical input"
+        ]
+    },
+    {
+        "id": 29,
+        "type": "detailed",
+        "role": "technician",
+        "category": "People & Culture",
+        "title": "Knowledge Contribution",
+        "description": "Share technical insights on sustainable construction methods.",
+        "bullets": [
+            "Contribute to team knowledge base through SharePoint articles or technical notes",
+            "Participate in sustainability training to enhance understanding of carbon principles",
+            "Attend external technical seminars and share practical insights with team"
+        ]
+    }
+]
