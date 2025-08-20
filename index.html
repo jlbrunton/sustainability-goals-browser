@@ -91,13 +91,8 @@
             transition: all 0.2s ease;
         }
 
-        .modal-btn:hover:not(:disabled) {
+        .modal-btn:hover {
             background: #00353e;
-        }
-
-        .modal-btn:disabled {
-            background: #d0d0d0;
-            cursor: not-allowed;
         }
 
         /* Grid System */
@@ -253,7 +248,7 @@
             gap: 6pt;
         }
 
-        .nav-btn:hover:not(:disabled) {
+        .nav-btn:hover {
             background: #00353e;
         }
 
@@ -365,7 +360,7 @@
             background: #00353e;
         }
 
-        .copy-btn.copied {
+        .copy-btn:active {
             background: #aecc53;
             color: #000000;
         }
@@ -560,7 +555,7 @@
     </div>
 
     <script>
-        // Complete goals database with all updates from director and graduate feedback
+        // Goals data - Updated with director and graduate feedback
         const goalsData = [
             // Simple Goals
             {
@@ -944,17 +939,3 @@
                     'Maintain accurate model data and generate regular carbon reports using Eco.Zero Measure',
                     'Contribute to material efficiency studies through detailed quantity take-offs',
                     'Participate in project sustainability reviews providing technical input'
-                ]
-            },
-            {
-                id: 29,
-                type: 'detailed',
-                role: 'technician',
-                category: 'People & Culture',
-                title: 'Knowledge Contribution',
-                description: 'Share technical insights on sustainable construction methods.',
-                bullets: [
-                    'Contribute to team knowledge base through SharePoint articles or technical notes',
-                    'Participate in sustainability training to enhance understanding of carbon principles',
-                    'Attend external technical seminars and share practical insights with team'
-                ]
