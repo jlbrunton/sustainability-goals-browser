@@ -453,7 +453,6 @@
     </style>
 </head>
 <body>
-    <!-- Welcome Modal -->
     <div id="welcomeModal" class="modal-overlay">
         <div class="modal">
             <h2>UK&I Structural Sustainability Goals</h2>
@@ -477,7 +476,6 @@
         </div>
     </div>
 
-    <!-- Main Content -->
     <div id="mainContent" class="container hidden">
         <div class="filters">
             <div class="filters-row">
@@ -521,8 +519,7 @@
             </div>
 
             <div id="goalContent" class="goal-content">
-                <!-- Goal content will be populated by JavaScript -->
-            </div>
+                </div>
         </div>
 
         <div class="resources-section">
@@ -539,3 +536,160 @@
                 <div class="resource-card">
                     <h4>Structural Sustainability Team</h4>
                     <p>Direct consultation with Jack Brunton, Ioana Price, and Megan Newson for expert guidance across all project stages.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Global variables
+        let allGoals = [];
+        let filteredGoals = [];
+        let currentIndex = 0;
+
+        // Element references
+        const welcomeModal = document.getElementById('welcomeModal');
+        const mainContent = document.getElementById('mainContent');
+        const modalRoleSelect = document.getElementById('modalRoleSelect');
+        const startBtn = document.getElementById('startBtn');
+        const roleSelect = document.getElementById('roleSelect');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentGoalSpan = document.getElementById('currentGoal');
+        const totalGoalsSpan = document.getElementById('totalGoals');
+        const goalContentDiv = document.getElementById('goalContent');
+
+        // Function to fetch the goals data from the JSON file
+        async function fetchGoals() {
+            try {
+                const response = await fetch('data/goals-data.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load goals data.');
+                }
+                allGoals = await response.json();
+                console.log('Goals loaded:', allGoals);
+            } catch (error) {
+                console.error('Error fetching goals:', error);
+                goalContentDiv.innerHTML = '<p class="no-goals">Failed to load goals data. Please check the file path.</p>';
+            }
+        }
+
+        // Function to filter goals based on user selections
+        function filterGoals() {
+            const role = roleSelect.value;
+            const type = document.querySelector('.filter-btn.active').dataset.value;
+
+            filteredGoals = allGoals.filter(goal => {
+                const roleMatch = (role === 'all' || goal.role === 'all' || goal.role === role);
+                const typeMatch = (type === 'all' || goal.type === type);
+                return roleMatch && typeMatch;
+            });
+            
+            currentIndex = 0;
+            renderGoal();
+            updateNavigation();
+        }
+
+        // Function to render the current goal
+        function renderGoal() {
+            if (filteredGoals.length === 0) {
+                goalContentDiv.innerHTML = '<p class="no-goals">No goals match your criteria. Try adjusting your selections.</p>';
+                return;
+            }
+
+            const goal = filteredGoals[currentIndex];
+            const bulletsHtml = goal.bullets.map(bullet => `<li>${bullet}</li>`).join('');
+
+            goalContentDiv.innerHTML = `
+                <div class="goal-meta">
+                    <span class="meta-tag job-level">${goal.role.toUpperCase()}</span>
+                    <span class="meta-tag category">${goal.category.toUpperCase()}</span>
+                    <span class="meta-tag type">${goal.type.toUpperCase()}</span>
+                </div>
+                <h3 class="goal-title">${goal.title}</h3>
+                <p class="goal-description">${goal.description}</p>
+                <ul class="goal-bullets">
+                    ${bulletsHtml}
+                </ul>
+                <button class="copy-btn">Copy to clipboard</button>
+            `;
+        }
+
+        // Function to update the navigation buttons and counter
+        function updateNavigation() {
+            prevBtn.disabled = (currentIndex === 0);
+            nextBtn.disabled = (currentIndex >= filteredGoals.length - 1);
+            currentGoalSpan.textContent = filteredGoals.length > 0 ? currentIndex + 1 : 0;
+            totalGoalsSpan.textContent = filteredGoals.length;
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial data fetch and setup
+            fetchGoals().then(() => {
+                // Set initial filters and render goals based on the modal selection
+                roleSelect.value = modalRoleSelect.value;
+                filterGoals();
+            });
+
+            // Modal button functionality
+            modalRoleSelect.addEventListener('change', () => {
+                if (modalRoleSelect.value) {
+                    startBtn.disabled = false;
+                } else {
+                    startBtn.disabled = true;
+                }
+            });
+
+            startBtn.addEventListener('click', () => {
+                welcomeModal.style.display = 'none';
+                mainContent.classList.remove('hidden');
+                roleSelect.value = modalRoleSelect.value;
+                filterGoals();
+            });
+
+            // Main filter functionality
+            roleSelect.addEventListener('change', filterGoals);
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    filterGoals();
+                });
+            });
+
+            // Navigation buttons
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < filteredGoals.length - 1) {
+                    currentIndex++;
+                    renderGoal();
+                    updateNavigation();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    renderGoal();
+                    updateNavigation();
+                }
+            });
+
+            // Copy to clipboard functionality
+            goalContentDiv.addEventListener('click', (e) => {
+                if (e.target.classList.contains('copy-btn')) {
+                    const goal = filteredGoals[currentIndex];
+                    const textToCopy = `${goal.title}: ${goal.description}\n\n- ${goal.bullets.join('\n- ')}`;
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        e.target.textContent = 'Copied!';
+                        setTimeout(() => e.target.textContent = 'Copy to clipboard', 1000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
