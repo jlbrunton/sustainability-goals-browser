@@ -652,14 +652,36 @@
                 prevBtn.disabled = currentGoalIndex === 0;
                 nextBtn.disabled = currentGoalIndex === filteredGoals.length - 1;
 
-                // Add copy button event listener
+                // Add copy button event listener with the workaround
                 goalContentDiv.querySelector('.copy-btn').addEventListener('click', () => {
                     const goalText = `Goal: ${goal.title}\nCategory: ${goal.category}\nRole: ${goal.role}\n\nActions:\n${goal.bullets.map(b => `- ${b}`).join('\n')}`;
-                    navigator.clipboard.writeText(goalText).then(() => {
-                        console.log('Goal text copied to clipboard');
-                    }).catch(err => {
+
+                    // Create a temporary, hidden textarea element
+                    const tempInput = document.createElement('textarea');
+                    tempInput.style.position = 'absolute';
+                    tempInput.style.left = '-9999px';
+                    tempInput.value = goalText;
+                    document.body.appendChild(tempInput);
+                    
+                    // Select the text and copy it
+                    tempInput.select();
+                    tempInput.setSelectionRange(0, 99999); // For mobile devices
+                    
+                    try {
+                        // Execute the copy command
+                        const successful = document.execCommand('copy');
+                        if (successful) {
+                            alert('Goal copied to clipboard!');
+                        } else {
+                            alert('Failed to copy. Please manually select and copy the text.');
+                        }
+                    } catch (err) {
                         console.error('Could not copy text: ', err);
-                    });
+                        alert('Failed to copy. Please manually select and copy the text.');
+                    } finally {
+                        // Clean up by removing the temporary element
+                        document.body.removeChild(tempInput);
+                    }
                 });
             }
 
