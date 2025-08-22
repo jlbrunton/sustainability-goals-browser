@@ -629,12 +629,17 @@
                     typeFilterBtns.forEach(b => b.classList.remove('active'));
                     e.target.classList.add('active');
                     
-                    // Reset role dropdown to "All Roles" if "Simple Goals" is selected
+                    // The core logic to address the user's request.
+                    // If a simple goal is selected, any role works.
+                    // If a detailed goal is selected, we filter by the selected role.
                     if (e.target.dataset.value === 'simple') {
-                        roleSelect.value = 'all';
+                        filteredGoals = allGoals.filter(goal => goal.type === 'simple');
+                    } else {
+                        filterAndDisplayGoals();
                     }
-
-                    filterAndDisplayGoals();
+                    
+                    currentGoalIndex = 0;
+                    displayGoal();
                 });
             });
 
