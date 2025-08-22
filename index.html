@@ -461,12 +461,13 @@
             <label for="modalRoleSelect" class="filter-label">What is your job role?</label>
             <select id="modalRoleSelect" class="modal-dropdown">
                 <option value="">Please select your role...</option>
-                <option value="graduate">Graduate Engineer</option>
+                <option value="graduate_engineer">Graduate Engineer</option>
                 <option value="assistant">Assistant Engineer</option>
                 <option value="engineer">Engineer</option>
-                <option value="senior">Senior Engineer</option>
-                <option value="principal">Principal Engineer</option>
-                <option value="associate">Associate Director</option>
+                <option value="senior_engineer">Senior Engineer</option>
+                <option value="principal_engineer">Principal Engineer</option>
+                <option value="associate_director">Associate Director</option>
+                <option value="regional_director">Regional Director</option>
                 <option value="director">Director</option>
                 <option value="technician">Technician</option>
                 <option value="all">Show me all roles</option>
@@ -492,12 +493,13 @@
                     <label class="filter-label" for="roleSelect">Job Role</label>
                     <select id="roleSelect" class="role-dropdown">
                         <option value="all">All Roles</option>
-                        <option value="graduate">Graduate Engineer</option>
+                        <option value="graduate_engineer">Graduate Engineer</option>
                         <option value="assistant">Assistant Engineer</option>
                         <option value="engineer">Engineer</option>
-                        <option value="senior">Senior Engineer</option>
-                        <option value="principal">Principal Engineer</option>
-                        <option value="associate">Associate Director</option>
+                        <option value="senior_engineer">Senior Engineer</option>
+                        <option value="principal_engineer">Principal Engineer</option>
+                        <option value="associate_director">Associate Director</option>
+                        <option value="regional_director">Regional Director</option>
                         <option value="director">Director</option>
                         <option value="technician">Technician</option>
                     </select>
@@ -559,9 +561,14 @@
             let filteredGoals = [];
             let currentGoalIndex = 0;
 
-            // Fetch and load the goals data
-            fetch('goals-data.json')
-                .then(response => response.json())
+            // Fetch and load the goals data from the correct path
+            fetch('data/goals-data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     allGoals = data;
                     showWelcomeModal();
@@ -586,10 +593,12 @@
             // Start exploring button click handler
             startBtn.addEventListener('click', () => {
                 const selectedRole = modalRoleSelect.value;
-                roleSelect.value = selectedRole; // Set the main filter dropdown
-                welcomeModal.classList.add('hidden');
-                mainContent.classList.remove('hidden');
-                filterAndDisplayGoals();
+                if (selectedRole !== '') {
+                    roleSelect.value = selectedRole; // Set the main filter dropdown
+                    welcomeModal.classList.add('hidden');
+                    mainContent.classList.remove('hidden');
+                    filterAndDisplayGoals();
+                }
             });
 
             // Filter and display goals based on current filters
@@ -619,13 +628,16 @@
                 }
 
                 const goal = filteredGoals[currentGoalIndex];
+                const roleLabel = goal.role.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                const categoryLabel = goal.category.toUpperCase();
+                const typeLabel = goal.type.toUpperCase();
                 const bulletsHtml = goal.bullets.map(bullet => `<li>${bullet}</li>`).join('');
 
                 goalContentDiv.innerHTML = `
                     <div class="goal-meta">
-                        <span class="meta-tag job-level">${goal.role.split('_').join(' ').toUpperCase()}</span>
-                        <span class="meta-tag category">${goal.category.toUpperCase()}</span>
-                        <span class="meta-tag type">${goal.type.toUpperCase()}</span>
+                        <span class="meta-tag job-level">${roleLabel}</span>
+                        <span class="meta-tag category">${categoryLabel}</span>
+                        <span class="meta-tag type">${typeLabel}</span>
                     </div>
                     <h3 class="goal-title">${goal.title}</h3>
                     <ul class="goal-bullets">${bulletsHtml}</ul>
