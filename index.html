@@ -187,6 +187,12 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
+        
+        /* Style for disabled dropdown */
+        .role-dropdown:disabled {
+            background: #f0f0f0;
+            cursor: not-allowed;
+        }
 
         .role-dropdown:hover {
             background: rgba(0, 135, 104, 0.05);
@@ -543,6 +549,11 @@
                 const selectedType = document.querySelector('.filter-btn.active').dataset.value;
 
                 filteredGoals = allGoals.filter(goal => {
+                    // Special case for 'simple' goals to show all
+                    if (selectedType === 'simple') {
+                        return goal.type === 'simple';
+                    }
+                    
                     const roleMatch = (selectedRole === 'all' || goal.role === selectedRole);
                     const typeMatch = (selectedType === 'all' || goal.type === selectedType);
                     return roleMatch && typeMatch;
@@ -628,18 +639,16 @@
                 btn.addEventListener('click', (e) => {
                     typeFilterBtns.forEach(b => b.classList.remove('active'));
                     e.target.classList.add('active');
-                    
-                    // The core logic to address the user's request.
-                    // If a simple goal is selected, any role works.
-                    // If a detailed goal is selected, we filter by the selected role.
-                    if (e.target.dataset.value === 'simple') {
-                        filteredGoals = allGoals.filter(goal => goal.type === 'simple');
+
+                    const selectedType = e.target.dataset.value;
+                    if (selectedType === 'simple') {
+                        roleSelect.value = 'all';
+                        roleSelect.disabled = true; // Disable the dropdown
                     } else {
-                        filterAndDisplayGoals();
+                        roleSelect.disabled = false; // Enable the dropdown
                     }
                     
-                    currentGoalIndex = 0;
-                    displayGoal();
+                    filterAndDisplayGoals();
                 });
             });
 
