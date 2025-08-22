@@ -301,6 +301,13 @@
             border: 1pt solid #00353e;
         }
 
+        .goal-description {
+            font-size: 10pt;
+            line-height: 15pt;
+            color: #000000;
+            margin-bottom: 18pt;
+        }
+
         .goal-bullets {
             list-style: none;
             padding: 0;
@@ -317,14 +324,12 @@
         }
 
         .goal-bullets li::before {
-            content: '—';
+            content: '–';
             position: absolute;
             left: 0;
             color: #008768;
             font-weight: bold;
         }
-
-
 
         .copy-btn {
             padding: 9pt 18pt;
@@ -448,7 +453,6 @@
     </style>
 </head>
 <body>
-    <!-- Welcome Modal -->
     <div id="welcomeModal" class="modal-overlay">
         <div class="modal">
             <h2>UK&I Structural Sustainability Goals</h2>
@@ -457,12 +461,12 @@
             <label for="modalRoleSelect" class="filter-label">What is your job role?</label>
             <select id="modalRoleSelect" class="modal-dropdown">
                 <option value="">Please select your role...</option>
-                <option value="graduate_engineer">Graduate Engineer</option>
+                <option value="graduate">Graduate Engineer</option>
+                <option value="assistant">Assistant Engineer</option>
                 <option value="engineer">Engineer</option>
-                <option value="senior_engineer">Senior Engineer</option>
-                <option value="principal_engineer">Principal Engineer</option>
-                <option value="associate_director">Associate Director</option>
-                <option value="regional_director">Regional Director</option>
+                <option value="senior">Senior Engineer</option>
+                <option value="principal">Principal Engineer</option>
+                <option value="associate">Associate Director</option>
                 <option value="director">Director</option>
                 <option value="technician">Technician</option>
                 <option value="all">Show me all roles</option>
@@ -472,7 +476,6 @@
         </div>
     </div>
 
-    <!-- Main Content -->
     <div id="mainContent" class="container hidden">
         <div class="filters">
             <div class="filters-row">
@@ -489,12 +492,12 @@
                     <label class="filter-label" for="roleSelect">Job Role</label>
                     <select id="roleSelect" class="role-dropdown">
                         <option value="all">All Roles</option>
-                        <option value="graduate_engineer">Graduate Engineer</option>
+                        <option value="graduate">Graduate Engineer</option>
+                        <option value="assistant">Assistant Engineer</option>
                         <option value="engineer">Engineer</option>
-                        <option value="senior_engineer">Senior Engineer</option>
-                        <option value="principal_engineer">Principal Engineer</option>
-                        <option value="associate_director">Associate Director</option>
-                        <option value="regional_director">Regional Director</option>
+                        <option value="senior">Senior Engineer</option>
+                        <option value="principal">Principal Engineer</option>
+                        <option value="associate">Associate Director</option>
                         <option value="director">Director</option>
                         <option value="technician">Technician</option>
                     </select>
@@ -516,8 +519,7 @@
             </div>
 
             <div id="goalContent" class="goal-content">
-                <!-- Goal content will be populated by JavaScript -->
-            </div>
+                </div>
         </div>
 
         <div class="resources-section">
@@ -540,240 +542,140 @@
     </div>
 
     <script>
-        // Goals data - updated structure without description field
-        const goalsData = [
-            {
-                "id": 1,
-                "type": "simple",
-                "role": "all",
-                "category": "Clients & Growth",
-                "title": "UK Structural Engineers Declare (UK SED)",
-                "bullets": [
-                    "Uphold signatory commitments by actively promoting climate emergency awareness and sustainable design principles",
-                    "Engage with the Structural Sustainability Team (Jack Brunton, Ioana Price, and Megan Newson) for guidance on implementing UK SED principles in client interactions and project delivery",
-                    "Embed sustainability thinking as a core consideration in all engineering decisions and recommendations"
-                ]
+        document.addEventListener('DOMContentLoaded', () => {
+            const welcomeModal = document.getElementById('welcomeModal');
+            const modalRoleSelect = document.getElementById('modalRoleSelect');
+            const startBtn = document.getElementById('startBtn');
+            const mainContent = document.getElementById('mainContent');
+            const roleSelect = document.getElementById('roleSelect');
+            const typeFilterBtns = document.querySelectorAll('.filter-btn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const currentGoalSpan = document.getElementById('currentGoal');
+            const totalGoalsSpan = document.getElementById('totalGoals');
+            const goalContentDiv = document.getElementById('goalContent');
+
+            let allGoals = [];
+            let filteredGoals = [];
+            let currentGoalIndex = 0;
+
+            // Fetch and load the goals data
+            fetch('goals-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    allGoals = data;
+                    showWelcomeModal();
+                })
+                .catch(error => {
+                    console.error('Error loading goals data:', error);
+                    goalContentDiv.innerHTML = '<div class="no-goals"><h3>Error loading goals.</h3><p>Please check the file path and try again.</p></div>';
+                    welcomeModal.classList.add('hidden');
+                    mainContent.classList.remove('hidden');
+                });
+
+            // Show the welcome modal
+            function showWelcomeModal() {
+                welcomeModal.classList.remove('hidden');
             }
-            // Additional goals would be loaded here from the JSON file
-        ];
 
-        // Application state
-        let currentGoalIndex = 0;
-        let filteredGoals = [];
-        let filters = {
-            type: 'all',
-            role: 'all'
-        };
-
-        // DOM elements
-        const welcomeModal = document.getElementById('welcomeModal');
-        const mainContent = document.getElementById('mainContent');
-        const modalRoleSelect = document.getElementById('modalRoleSelect');
-        const startBtn = document.getElementById('startBtn');
-        const roleSelect = document.getElementById('roleSelect');
-        const goalContent = document.getElementById('goalContent');
-        const currentGoalSpan = document.getElementById('currentGoal');
-        const totalGoalsSpan = document.getElementById('totalGoals');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        // Initialize the application
-        function init() {
-            loadGoalsData();
-            setupEventListeners();
-            filterGoals();
-        }
-
-        // Load goals data (in a real app, this would be an AJAX call)
-        async function loadGoalsData() {
-            try {
-                // In a real implementation, load from goals-data.json
-                // For now, using embedded data
-                filteredGoals = goalsData;
-            } catch (error) {
-                console.error('Failed to load goals data:', error);
-            }
-        }
-
-        // Set up event listeners
-        function setupEventListeners() {
-            // Modal interactions
-            modalRoleSelect.addEventListener('change', function() {
-                startBtn.disabled = !this.value;
+            // Enable start button on modal role selection
+            modalRoleSelect.addEventListener('change', () => {
+                startBtn.disabled = modalRoleSelect.value === '';
             });
 
-            startBtn.addEventListener('click', function() {
+            // Start exploring button click handler
+            startBtn.addEventListener('click', () => {
                 const selectedRole = modalRoleSelect.value;
-                filters.role = selectedRole;
-                
-                // Update main role selector
-                roleSelect.value = selectedRole;
-                
-                // Hide modal and show main content
+                roleSelect.value = selectedRole; // Set the main filter dropdown
                 welcomeModal.classList.add('hidden');
                 mainContent.classList.remove('hidden');
-                
-                // Filter and display goals
-                filterGoals();
-                displayCurrentGoal();
+                filterAndDisplayGoals();
             });
 
-            // Filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const filterType = this.dataset.filter;
-                    const filterValue = this.dataset.value;
-                    
-                    // Update active state
-                    document.querySelectorAll(`[data-filter="${filterType}"]`).forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Update filter
-                    filters[filterType] = filterValue;
-                    filterGoals();
-                    displayCurrentGoal();
+            // Filter and display goals based on current filters
+            function filterAndDisplayGoals() {
+                const selectedRole = roleSelect.value;
+                const selectedType = document.querySelector('.filter-btn.active').dataset.value;
+
+                filteredGoals = allGoals.filter(goal => {
+                    const roleMatch = (selectedRole === 'all' || goal.role === selectedRole);
+                    const typeMatch = (selectedType === 'all' || goal.type === selectedType);
+                    return roleMatch && typeMatch;
+                });
+
+                currentGoalIndex = 0;
+                displayGoal();
+            }
+
+            // Display a specific goal
+            function displayGoal() {
+                if (filteredGoals.length === 0) {
+                    goalContentDiv.innerHTML = '<div class="no-goals"><h3>No goals found.</h3><p>Try adjusting your filters.</p></div>';
+                    prevBtn.disabled = true;
+                    nextBtn.disabled = true;
+                    currentGoalSpan.textContent = 0;
+                    totalGoalsSpan.textContent = 0;
+                    return;
+                }
+
+                const goal = filteredGoals[currentGoalIndex];
+                const bulletsHtml = goal.bullets.map(bullet => `<li>${bullet}</li>`).join('');
+
+                goalContentDiv.innerHTML = `
+                    <div class="goal-meta">
+                        <span class="meta-tag job-level">${goal.role.split('_').join(' ').toUpperCase()}</span>
+                        <span class="meta-tag category">${goal.category.toUpperCase()}</span>
+                        <span class="meta-tag type">${goal.type.toUpperCase()}</span>
+                    </div>
+                    <h3 class="goal-title">${goal.title}</h3>
+                    <ul class="goal-bullets">${bulletsHtml}</ul>
+                    <button class="copy-btn">COPY TO CLIPBOARD</button>
+                `;
+
+                // Update goal counter
+                currentGoalSpan.textContent = currentGoalIndex + 1;
+                totalGoalsSpan.textContent = filteredGoals.length;
+
+                // Update navigation button states
+                prevBtn.disabled = currentGoalIndex === 0;
+                nextBtn.disabled = currentGoalIndex === filteredGoals.length - 1;
+
+                // Add copy button event listener
+                goalContentDiv.querySelector('.copy-btn').addEventListener('click', () => {
+                    const goalText = `Goal: ${goal.title}\nCategory: ${goal.category}\nRole: ${goal.role}\n\nActions:\n${goal.bullets.map(b => `- ${b}`).join('\n')}`;
+                    navigator.clipboard.writeText(goalText).then(() => {
+                        console.log('Goal text copied to clipboard');
+                    }).catch(err => {
+                        console.error('Could not copy text: ', err);
+                    });
+                });
+            }
+
+            // Event listeners for filters and navigation
+            roleSelect.addEventListener('change', filterAndDisplayGoals);
+
+            typeFilterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    typeFilterBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    filterAndDisplayGoals();
                 });
             });
 
-            // Role selector
-            roleSelect.addEventListener('change', function() {
-                filters.role = this.value;
-                filterGoals();
-                displayCurrentGoal();
-            });
-
-            // Navigation buttons
             prevBtn.addEventListener('click', () => {
                 if (currentGoalIndex > 0) {
                     currentGoalIndex--;
-                    displayCurrentGoal();
+                    displayGoal();
                 }
             });
 
             nextBtn.addEventListener('click', () => {
                 if (currentGoalIndex < filteredGoals.length - 1) {
                     currentGoalIndex++;
-                    displayCurrentGoal();
+                    displayGoal();
                 }
             });
-        }
-
-        // Filter goals based on current filters
-        function filterGoals() {
-            filteredGoals = goalsData.filter(goal => {
-                // Type filter
-                if (filters.type !== 'all' && goal.type !== filters.type) {
-                    return false;
-                }
-                
-                // Role filter
-                if (filters.role !== 'all' && goal.role !== 'all' && goal.role !== filters.role) {
-                    return false;
-                }
-                
-                return true;
-            });
-
-            // Reset current goal index if it's out of bounds
-            if (currentGoalIndex >= filteredGoals.length) {
-                currentGoalIndex = 0;
-            }
-
-            // Update total goals counter
-            totalGoalsSpan.textContent = filteredGoals.length;
-        }
-
-        // Display the current goal
-        function displayCurrentGoal() {
-            if (filteredGoals.length === 0) {
-                goalContent.innerHTML = `
-                    <div class="no-goals">
-                        <h3>No goals match your current filters</h3>
-                        <p>Try adjusting your filter settings to see more goals.</p>
-                    </div>
-                `;
-                currentGoalSpan.textContent = '0';
-                prevBtn.disabled = true;
-                nextBtn.disabled = true;
-                return;
-            }
-
-            const goal = filteredGoals[currentGoalIndex];
-            const roleDisplayName = getRoleDisplayName(goal.role);
-
-            // Create bullets HTML - all bullets formatted the same
-            const bulletsHtml = goal.bullets.map((bullet, index) => {
-                return `<li>${bullet}</li>`;
-            }).join('');
-
-            goalContent.innerHTML = `
-                <h2 class="goal-title">${goal.title}</h2>
-                <div class="goal-meta">
-                    <span class="meta-tag job-level">${roleDisplayName}</span>
-                    <span class="meta-tag category">${goal.category}</span>
-                    <span class="meta-tag type">${goal.type} goal</span>
-                </div>
-                <ul class="goal-bullets">
-                    ${bulletsHtml}
-                </ul>
-                <button class="copy-btn" onclick="copyGoalText()">Copy Goal Text</button>
-                <div style="clear: both;"></div>
-            `;
-
-            // Update navigation
-            currentGoalSpan.textContent = currentGoalIndex + 1;
-            prevBtn.disabled = currentGoalIndex === 0;
-            nextBtn.disabled = currentGoalIndex === filteredGoals.length - 1;
-        }
-
-        // Get display name for role
-        function getRoleDisplayName(role) {
-            const roleNames = {
-                'all': 'All Roles',
-                'graduate_engineer': 'Graduate Engineer',
-                'engineer': 'Engineer', 
-                'senior_engineer': 'Senior Engineer',
-                'principal_engineer': 'Principal Engineer',
-                'associate_director': 'Associate Director',
-                'regional_director': 'Regional Director',
-                'director': 'Director',
-                'technician': 'Technician'
-            };
-            return roleNames[role] || role;
-        }
-
-        // Copy goal text to clipboard
-        function copyGoalText() {
-            const goal = filteredGoals[currentGoalIndex];
-            const roleDisplayName = getRoleDisplayName(goal.role);
-            
-            let text = `${goal.title}\n`;
-            text += `Role: ${roleDisplayName}\n`;
-            text += `Category: ${goal.category}\n`;
-            text += `Type: ${goal.type} goal\n\n`;
-            
-            goal.bullets.forEach((bullet, index) => {
-                text += `${index === 0 ? 'Description:' : '•'} ${bullet}\n`;
-            });
-
-            navigator.clipboard.writeText(text).then(() => {
-                // Visual feedback
-                const btn = event.target;
-                const originalText = btn.textContent;
-                btn.textContent = 'Copied!';
-                btn.style.background = '#aecc53';
-                btn.style.color = '#000000';
-                
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = '#e52713';
-                    btn.style.color = 'white';
-                }, 1500);
-            });
-        }
-
-        // Start the application
-        init();
+        });
     </script>
 </body>
 </html>
