@@ -670,6 +670,12 @@
                 btn.addEventListener('click', (e) => {
                     typeFilterBtns.forEach(b => b.classList.remove('active'));
                     e.target.classList.add('active');
+                    
+                    // Reset role dropdown to "All Roles" if "Simple Goals" is selected
+                    if (e.target.dataset.value === 'simple') {
+                        roleSelect.value = 'all';
+                    }
+
                     filterAndDisplayGoals();
                 });
             });
