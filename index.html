@@ -369,41 +369,6 @@
             color: #000000;
         }
 
-        /* Resources section */
-        .resources-section {
-            background: #f6f6f6;
-            padding: 24pt;
-            margin-top: 36pt;
-            border-left: 3pt solid #aecc53;
-        }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250pt, 1fr));
-            gap: 18pt;
-            margin-top: 18pt;
-        }
-
-        .resource-card {
-            background: white;
-            padding: 18pt;
-            border: 1pt solid #d0d0d0;
-        }
-
-        .resource-card h4 {
-            font-size: 12pt;
-            line-height: 15pt;
-            font-weight: bold;
-            color: #008768;
-            margin-bottom: 6pt;
-        }
-
-        .resource-card p {
-            font-size: 9pt;
-            line-height: 12pt;
-            color: #000000;
-        }
-
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
@@ -440,15 +405,6 @@
                 padding: 6pt 12pt;
                 font-size: 10pt;
             }
-            
-            .resources-section {
-                padding: 18pt;
-            }
-            
-            .resources-grid {
-                grid-template-columns: 1fr;
-                gap: 12pt;
-            }
         }
     </style>
 </head>
@@ -462,7 +418,6 @@
             <select id="modalRoleSelect" class="modal-dropdown">
                 <option value="">Please select your role...</option>
                 <option value="graduate_engineer">Graduate Engineer</option>
-                <option value="assistant">Assistant Engineer</option>
                 <option value="engineer">Engineer</option>
                 <option value="senior_engineer">Senior Engineer</option>
                 <option value="principal_engineer">Principal Engineer</option>
@@ -494,7 +449,6 @@
                     <select id="roleSelect" class="role-dropdown">
                         <option value="all">All Roles</option>
                         <option value="graduate_engineer">Graduate Engineer</option>
-                        <option value="assistant">Assistant Engineer</option>
                         <option value="engineer">Engineer</option>
                         <option value="senior_engineer">Senior Engineer</option>
                         <option value="principal_engineer">Principal Engineer</option>
@@ -522,24 +476,6 @@
 
             <div id="goalContent" class="goal-content">
                 </div>
-        </div>
-
-        <div class="resources-section">
-            <h2 class="heading-05">Available Resources</h2>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4>Structural Sustainability SharePoint</h4>
-                    <p>Comprehensive knowledge hub with ScopeX decarbonisation guidance, Eco.Zero tools, project templates, CPD opportunities, and monthly newsletters.</p>
-                </div>
-                <div class="resource-card">
-                    <h4>Eco.Zero™ Tool Suite</h4>
-                    <p>Optioneering Tool for early project stages (RIBA 0/1) and Measure Tool for automated carbon tracking from Revit models.</p>
-                </div>
-                <div class="resource-card">
-                    <h4>Structural Sustainability Team</h4>
-                    <p>Direct consultation with Jack Brunton, Ioana Price, and Megan Newson for expert guidance across all project stages.</p>
-                </div>
-            </div>
         </div>
     </div>
 
