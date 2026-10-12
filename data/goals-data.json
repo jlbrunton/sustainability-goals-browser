@@ -1,353 +1,349 @@
 [
-    {
-        "id": 1,
-        "type": "simple",
-        "role": "all",
-        "category": "Clients & Growth",
-        "title": "UK Structural Engineers Declare (UK SED)",
-        "bullets": [
-            "Uphold signatory commitments by actively promoting climate emergency awareness and sustainable design principles",
-            "Engage with the Structural Sustainability Team (Jack Brunton, Ioana Price, and Megan Newson) for guidance on implementing UK SED principles in client interactions and project delivery",
-            "Embed sustainability thinking as a core consideration in all engineering decisions and recommendations"
-        ]
-    },
-    {
-        "id": 2,
-        "type": "simple",
-        "role": "all",
-        "category": "People & Culture",
-        "title": "Knowledge sharing platform",
-        "bullets": [
-            "Regular SharePoint engagement including accessing monthly newsletters, technical resources and sustainability updates",
-            "Contribute project experiences through case studies, lessons learned or technical insights that benefit the broader team",
-            "Collaborate with the Structural Sustainability Team to share innovative approaches, challenges and solutions, and seek guidance on sustainable design implementation"
-        ]
-    },
-    {
-        "id": 3,
-        "type": "simple",
-        "role": "all",
-        "category": "Development",
-        "title": "Continuous development",
-        "bullets": [
-            "Stay current with sustainability developments including new tools, standards and industry best practices",
-            "Participate in training opportunities related to sustainable design, carbon assessment and circular economy principles",
-            "Consult with the Structural Sustainability Team to seek feedback and improvement on sustainability approaches and access expertise in Eco.Zero tools and sustainable design methods"
-        ]
-    },
-    {
-        "id": 4,
-        "type": "simple",
-        "role": "all",
-        "category": "Delivery & Operational Excellence",
-        "title": "Eco.Zero™ deployment",
-        "bullets": [
-            "Apply Eco.Zero Concept tool for early-stage (RIBA 0/1) carbon and cost optioneering to influence sustainable design decisions across structural typologies",
-            "For Revit projects, implement Eco.Zero Measure for systematic carbon tracking, enabling identification of carbon hotspots, reporting and benchmarking, and implementation of reduction strategies",
-            "Collaborate with the Structural Sustainability Team to effectively deploy Eco.Zero tools and maximise their impact on project sustainability outcomes"
-        ]
-    },
-    {
-        "id": 5,
-        "type": "simple",
-        "role": "all",
-        "category": "Delivery & Operational Excellence",
-        "title": "Structural decarbonisation throughout project lifecycle",
-        "bullets": [
-            "Where Eco.Zero Concept is not applicable, undertake manual optioneering studies and estimate associated carbon using IStructE Structural Carbon Tool or other means",
-            "Monitor and report structural carbon across all design stages. Leverage Eco.Zero Measure as appropriate",
-            "Determine a baseline and demonstrate continual reduction throughout the project lifecycle"
-        ]
-    },
-    {
-        "id": 6,
-        "type": "detailed",
-        "role": "director",
-        "category": "People & Culture",
-        "title": "Cultivating sustainable design paradigm shift",
-        "bullets": [
-            "Drive paradigm shift towards sustainable service delivery by promoting UK SED commitments in team meetings, project reviews, and client interactions, tracked through sustainability discussion frequency, team member confidence in sustainability conversations, and integration of sustainable principles into standard project workflows by Q4 FY26",
-            "Establish regular engagement with structural sustainability team to embed sustainable thinking into daily engineering decisions, evidenced by monthly consultation records, project sustainability reviews, and demonstrated culture change towards sustainable design as standard practice"
-        ]
-    },
-    {
-        "id": 7,
-        "type": "detailed",
-        "role": "director",
-        "category": "Clients & Growth",
-        "title": "Driving sustainable design leadership in key markets",
-        "bullets": [
-            "Promote early-stage (RIBA 0-1) structural sustainability input by championing the value add of Eco.Zero optioneering capabilities in client engagement, measured through increased early-stage project engagement and client recognition of sustainability value by Q4 FY26",
-            "Develop new client relationships by showcasing UK SED credentials and Eco.Zero carbon optioneering expertise, evidenced by client presentations, project proposals highlighting sustainability capabilities, and positive client feedback on sustainability advisory services",
-            "Establish reputation for sustainability leadership through consistent application of UK SED principles and Eco.Zero tools across project portfolio, measured through client testimonials, case study development, and enhanced market positioning for sustainable structural design"
-        ]
-    },
-    {
-        "id": 8,
-        "type": "detailed",
-        "role": "director",
-        "category": "Clients & Growth",
-        "title": "Leveraging structural sustainability team and Eco.Zero capabilities in business development",
-        "bullets": [
-            "Integrate structural sustainability team expertise and Eco.Zero capabilities into bid responses and client proposals, measured through enhanced bid quality, sustainability value propositions, and demonstration of UK SED commitments in business development activities",
-            "Establish systematic consultation with structural sustainability team for strategic projects, evidenced by regular engagement records, Eco.Zero application in early-stage design decisions, and improved project sustainability outcomes through collaborative working"
-        ]
-    },
-    {
-        "id": 9,
-        "type": "detailed",
-        "role": "director",
-        "category": "Delivery & Operational Excellence",
-        "title": "Embedding sustainability excellence across operations",
-        "bullets": [
-            "Implement Eco.Zero Measure carbon tracking across structural projects to establish embodied carbon baseline and identify reduction opportunities, tracked through systematic application of carbon assessment tools and development of project carbon profiles",
-            "Establish baseline embodied carbon performance across project portfolio and implement systematic carbon reduction strategies through Eco.Zero Measure application, measured through consistent carbon tracking implementation, identification of reduction opportunities, and annual carbon performance trend analysis by Q4 FY26",
-            "Develop regular sustainability performance reviews incorporating UK SED principles and Eco.Zero insights, evidenced by structured review processes, carbon performance documentation, and continuous improvement in sustainable design integration"
-        ]
-    },
-    {
-        "id": 10,
-        "type": "detailed",
-        "role": "regional_director",
-        "category": "People & Culture",
-        "title": "Leading sustainable design culture change",
-        "bullets": [
-            "Champion UK SED principles within department by facilitating monthly sustainability discussions and encouraging team members to challenge conventional design approaches, measured through increased sustainability-focused project decisions and team member engagement with sustainable design principles by Q3 FY26",
-            "Collaborate regularly with structural sustainability team to build department capability in sustainable design thinking, evidenced by consultation frequency, knowledge transfer sessions, and team member confidence in applying sustainable principles to project challenges",
-            "Drive paradigm shift towards embedding sustainability as core engineering competency by promoting UK SED commitments in project planning, design reviews, and professional development conversations, tracked through integration of sustainability considerations into standard departmental processes and procedures by Q4 FY26"
-        ]
-    },
-    {
-        "id": 11,
-        "type": "detailed",
-        "role": "regional_director",
-        "category": "Clients & Growth",
-        "title": "Enhancing client experience through sustainability innovation",
-        "bullets": [
-            "Contribute case studies and technical articles to Structural Sustainability SharePoint newsletter showcasing Eco.Zero applications and UK SED implementation, evidenced by published content and knowledge sharing with broader team",
-            "Lead bid writing and proposals that promote structural sustainability credentials through Eco.Zero capabilities and UK SED principles, measured through enhanced bid quality, sustainability value propositions, and client recognition of carbon optioneering expertise",
-            "Develop client engagement strategies that showcase early-stage sustainability intervention using Eco.Zero optioneering tools, tracked through client feedback, project appointment success, and demonstration of sustainable design value"
-        ]
-    },
-    {
-        "id": 12,
-        "type": "detailed",
-        "role": "regional_director",
-        "category": "Clients & Growth",
-        "title": "Maximising structural sustainability team consultation and Eco.Zero use in project delivery",
-        "bullets": [
-            "Facilitate regular structural sustainability team consultation on department projects, incorporating Eco.Zero optioneering and Measure tools for enhanced sustainability outcomes, measured through consultation engagement, project carbon performance improvements, and team feedback on collaborative working",
-            "Develop and implement systematic sustainability integration processes for project stages (RIBA 0-6) incorporating Eco.Zero tools and UK SED principles, evidenced by process documentation, team capability development, and consistent application across applicable projects"
-        ]
-    },
-    {
-        "id": 13,
-        "type": "detailed",
-        "role": "regional_director",
-        "category": "Delivery & Operational Excellence",
-        "title": "Driving structural carbon excellence and quality",
-        "bullets": [
-            "Improve Eco.Zero Measure carbon assessment quality and consistency through enhanced modelling protocols and peer review processes, measured through implementation of quality assurance procedures, regular model validation checks, and continuous improvement in carbon assessment reliability by Q3 FY26",
-            "Develop and implement streamlined carbon tracking workflows to improve assessment efficiency and team productivity, tracked through process documentation, workflow optimisation initiatives, and team feedback on improved assessment procedures by Q2 FY26",
-            "Ensure structural projects demonstrate compliance with UK SED principles through systematic application of Eco.Zero tools and sustainability review processes, evidenced by project sustainability documentation, carbon performance tracking, and continuous improvement in sustainable design integration"
-        ]
-    },
-    {
-        "id": 14,
-        "type": "detailed",
-        "role": "associate_director",
-        "category": "Clients & Growth",
-        "title": "Sustainability leadership",
-        "bullets": [
-            "Champion UK SED commitments by advocating for sustainable design principles and Eco.Zero optioneering capabilities with clients from project inception (RIBA Stage 0/1), measured through client engagement in early-stage sustainability discussions and demonstrated application of carbon optioneering tools in project development",
-            "Lead early engagement initiatives to involve structural engineering expertise in strategic project decisions using Eco.Zero tools for site selection, building form optimisation, and material selection strategies, evidenced by early-stage project appointments, client recognition of sustainability value, and measurable carbon impact considerations",
-            "Establish project carbon awareness and implement Eco.Zero Measure carbon tracking as standard practice, tracked through consistent application of carbon assessment tools across projects and development of project-specific carbon profiles and reduction strategies"
-        ]
-    },
-    {
-        "id": 15,
-        "type": "detailed",
-        "role": "associate_director",
-        "category": "Delivery & Operational Excellence",
-        "title": "Technical excellence & innovation",
-        "bullets": [
-            "Develop structural optioneering strategies using Eco.Zero tools to influence architectural proposals and building briefs with low-carbon solutions, measured through application of carbon optioneering capabilities, documentation of design alternatives, and client adoption of sustainable design recommendations",
-            "Champion circular design principles by integrating reuse of existing assets and minimising virgin material use in structural solutions supported by Eco.Zero Measure analysis, evidenced by project case studies, material efficiency improvements, and contributions to SharePoint knowledge base",
-            "Drive whole-life carbon thinking by challenging conventional design approaches and promoting lean design principles through Eco.Zero insights, tracked through design review documentation, sustainable design advocacy, and peer recognition within professional networks"
-        ]
-    },
-    {
-        "id": 16,
-        "type": "detailed",
-        "role": "associate_director",
-        "category": "Development",
-        "title": "Knowledge sharing & thought leadership",
-        "bullets": [
-            "Contribute to Structural Sustainability SharePoint by authoring at least one case study, technical note or thought leadership article for the bi-monthly newsletter by Q3 FY26, evidenced by published content, reader engagement metrics, and peer feedback scores",
-            "Engage with broader sustainability community by participating in industry events, conferences or collaborative initiatives that advance structural sustainability, measured through event attendance records, speaking engagements, and professional network development aligned with UK SED objectives"
-        ]
-    },
-    {
-        "id": 17,
-        "type": "detailed",
-        "role": "principal_engineer",
-        "category": "Clients & Growth",
-        "title": "Sustainability leadership",
-        "bullets": [
-            "Champion UK SED commitments by advocating for sustainable design principles and Eco.Zero optioneering capabilities with clients from project inception (RIBA Stage 0/1), measured through client engagement in early-stage sustainability discussions and demonstrated application of carbon optioneering tools in project development",
-            "Lead early engagement initiatives to involve structural engineering expertise in strategic project decisions using Eco.Zero tools for site selection, building form optimisation, and material selection strategies, evidenced by early-stage project appointments, client recognition of sustainability value, and measurable carbon impact considerations",
-            "Establish project carbon awareness and implement Eco.Zero Measure carbon tracking as standard practice, tracked through consistent application of carbon assessment tools across projects and development of project-specific carbon profiles and reduction strategies"
-        ]
-    },
-    {
-        "id": 18,
-        "type": "detailed",
-        "role": "principal_engineer",
-        "category": "Delivery & Operational Excellence",
-        "title": "Technical excellence & innovation",
-        "bullets": [
-            "Develop structural optioneering strategies using Eco.Zero tools to influence architectural proposals and building briefs with low-carbon solutions, measured through application of carbon optioneering capabilities, documentation of design alternatives, and client adoption of sustainable design recommendations",
-            "Champion circular design principles by integrating reuse of existing assets and minimising virgin material use in structural solutions supported by Eco.Zero Measure analysis, evidenced by project case studies, material efficiency improvements, and contributions to SharePoint knowledge base",
-            "Drive whole-life carbon thinking by challenging conventional design approaches and promoting lean design principles through Eco.Zero insights, tracked through design review documentation, sustainable design advocacy, and peer recognition within professional networks"
-        ]
-    },
-    {
-        "id": 19,
-        "type": "detailed",
-        "role": "principal_engineer",
-        "category": "Development",
-        "title": "Knowledge sharing & thought leadership",
-        "bullets": [
-            "Contribute to Structural Sustainability SharePoint by authoring at least one case study, technical note or thought leadership article for the bi-monthly newsletter by Q3 FY26, evidenced by published content, reader engagement metrics, and peer feedback scores",
-            "Engage with broader sustainability community by participating in industry events, conferences or collaborative initiatives that advance structural sustainability, measured through event attendance records, speaking engagements, and professional network development aligned with UK SED objectives"
-        ]
-    },
-    {
-        "id": 20,
-        "type": "detailed",
-        "role": "senior_engineer",
-        "category": "Delivery & Operational Excellence",
-        "title": "Project delivery excellence",
-        "bullets": [
-            "Apply UK SED principles consistently across project work by challenging design briefs and proposing sustainable alternatives using Eco.Zero insights, measured through project sustainability considerations, design review participation, and documented sustainable design interventions",
-            "Implement carbon tracking protocols using Eco.Zero Measure throughout design development to identify carbon hotspots and optimisation opportunities, evidenced by systematic carbon assessment application, identification of reduction opportunities, and contribution to project carbon profiles",
-            "Promote early-stage sustainability input by advocating for structural engineering involvement in RIBA Stages 0-1 and showcasing Eco.Zero optioneering capabilities, tracked through early-stage project engagement, sustainability discussion participation, and demonstration of carbon optioneering value"
-        ]
-    },
-    {
-        "id": 21,
-        "type": "detailed",
-        "role": "senior_engineer",
-        "category": "Development",
-        "title": "Technical development",
-        "bullets": [
-            "Master sustainable design tools including proficient use of Eco.Zero optioneering and Measure tools for structural carbon assessment and design optimisation, evidenced by tool application in projects, competency development, and peer collaboration in sustainable design approaches",
-            "Develop circular design expertise by incorporating material reuse strategies and design for disassembly principles supported by Eco.Zero analysis, measured through project case studies, material efficiency considerations, and knowledge sharing contributions to team learning",
-            "Enhance whole-life carbon knowledge through understanding of manufacturing processes, material impacts and end-of-life considerations using Eco.Zero insights, tracked through CPD engagement, assessment understanding, and practical application in project work"
-        ]
-    },
-    {
-        "id": 22,
-        "type": "detailed",
-        "role": "senior_engineer",
-        "category": "People & Culture",
-        "title": "Collaboration & communication",
-        "bullets": [
-            "Engage with Structural Sustainability SharePoint by regularly accessing resources and contributing project insights, lessons learned, and Eco.Zero application experiences, measured through platform engagement, knowledge sharing participation, and contribution to team learning",
-            "Support knowledge transfer by participating in internal sustainability discussions and sharing best practices in Eco.Zero application and UK SED implementation, evidenced by meeting participation, documented knowledge sharing, and peer support in sustainable design approaches"
-        ]
-    },
-    {
-        "id": 23,
-        "type": "detailed",
-        "role": "engineer",
-        "category": "Delivery & Operational Excellence",
-        "title": "Project delivery excellence",
-        "bullets": [
-            "Apply UK SED principles consistently across project work by challenging design briefs and proposing sustainable alternatives using Eco.Zero insights, measured through project sustainability considerations, design review participation, and documented sustainable design interventions",
-            "Implement carbon tracking protocols using Eco.Zero Measure throughout design development to identify carbon hotspots and optimisation opportunities, evidenced by systematic carbon assessment application, identification of reduction opportunities, and contribution to project carbon profiles",
-            "Promote early-stage sustainability input by advocating for structural engineering involvement in RIBA Stages 0-1 and showcasing Eco.Zero optioneering capabilities, tracked through early-stage project engagement, sustainability discussion participation, and demonstration of carbon optioneering value"
-        ]
-    },
-    {
-        "id": 24,
-        "type": "detailed",
-        "role": "engineer",
-        "category": "Development",
-        "title": "Technical development",
-        "bullets": [
-            "Master sustainable design tools including proficient use of Eco.Zero optioneering and Measure tools for structural carbon assessment and design optimisation, evidenced by tool application in projects, competency development, and peer collaboration in sustainable design approaches",
-            "Develop circular design expertise by incorporating material reuse strategies and design for disassembly principles supported by Eco.Zero analysis, measured through project case studies, material efficiency considerations, and knowledge sharing contributions to team learning",
-            "Enhance whole-life carbon knowledge through understanding of manufacturing processes, material impacts and end-of-life considerations using Eco.Zero insights, tracked through CPD engagement, assessment understanding, and practical application in project work"
-        ]
-    },
-    {
-        "id": 25,
-        "type": "detailed",
-        "role": "engineer",
-        "category": "People & Culture",
-        "title": "Collaboration & communication",
-        "bullets": [
-            "Engage with Structural Sustainability SharePoint by regularly accessing resources and contributing project insights, lessons learned, and Eco.Zero application experiences, measured through platform engagement, knowledge sharing participation, and contribution to team learning",
-            "Support knowledge transfer by participating in internal sustainability discussions and sharing best practices in Eco.Zero application and UK SED implementation, evidenced by meeting participation, documented knowledge sharing, and peer support in sustainable design approaches"
-        ]
-    },
-    {
-        "id": 26,
-        "type": "detailed",
-        "role": "graduate_engineer",
-        "category": "Development",
-        "title": "Core sustainability application",
-        "bullets": [
-            "Apply UK SED principles in daily project work by understanding sustainability requirements and contributing to sustainable design solutions using Eco.Zero tools, measured through project participation, sustainability task completion, and supervisor feedback on sustainable design understanding",
-            "Support carbon tracking activities using Eco.Zero Measure under supervision to develop understanding of embodied carbon assessment, evidenced by training engagement, successful tool application, and progressive skill development in carbon assessment techniques",
-            "Develop sustainability awareness through engagement with sustainability resources, team discussions, and Eco.Zero tool familiarisation, tracked through SharePoint engagement, team meeting participation, and completion of sustainability learning activities"
-        ]
-    },
-    {
-        "id": 27,
-        "type": "detailed",
-        "role": "graduate_engineer",
-        "category": "Development",
-        "title": "Skill development",
-        "bullets": [
-            "Build sustainable design competency by learning to use Eco.Zero tools and understanding their application in project delivery, evidenced by tool training engagement, practical application in supervised projects, and competency development in carbon optioneering and assessment",
-            "Understand circular design concepts including material reuse, recycling and design for disassembly principles supported by Eco.Zero insights, measured through learning engagement, knowledge development, and practical application in assigned project tasks",
-            "Develop sustainability knowledge by accessing SharePoint resources, delivering or attending CPD events (internal or external), and completing Eco.Zero tool training. Progress is tracked through platform engagement, session attendance, and learning objective completion"
-        ]
-    },
-    {
-        "id": 28,
-        "type": "detailed",
-        "role": "graduate_engineer",
-        "category": "People & Culture",
-        "title": "Professional growth",
-        "bullets": [
-            "Engage with Structural Sustainability SharePoint to access learning materials, case studies and technical guidance, measured through regular platform usage, resource utilisation, and application of learned concepts in project work",
-            "Contribute to project sustainability goals by supporting carbon assessment activities and sustainable design implementation, evidenced by task completion records, quality assessments, and progressive responsibility increases aligned with UK SED principles"
-        ]
-    },
-    {
-        "id": 29,
-        "type": "detailed",
-        "role": "technician",
-        "category": "Delivery & Operational Excellence",
-        "title": "Eco.zero measure excellence",
-        "bullets": [
-            "Master Eco.Zero Measure protocols including accurate element classification, appropriate rebar rate inputs and correct material property assignments, evidenced by quality performance, peer review feedback, and consistent delivery of reliable carbon data across all assigned projects",
-            "Support project teams by providing timely and accurate model data, using eco.zero.panel, that enables carbon estimation, tracked through delivery timeframes, data quality feedback, and positive feedback from engineering teams on data quality and usefulness"
-        ]
-    },
-    {
-        "id": 30,
-        "type": "detailed",
-        "role": "technician",
-        "category": "Development",
-        "title": "Continuous improvement",
-        "bullets": [
-            "Engage with Structural Sustainability SharePoint to access technical guidance, best practices and latest sustainability protocols, measured through regular platform engagement, resource utilisation tracking, and application of new knowledge in project work",
-            "Develop sustainability awareness by understanding how modelling decisions impact carbon performance and sustainability outcomes, evidenced by completion of sustainability training activities, assessment understanding, and demonstrated understanding in project applications",
-            "Attend eco.zero.panel training sessions"
-        ]
-    }
+  {
+    "id": 1,
+    "type": "simple",
+    "role": "all",
+    "category": "People & Culture",
+    "title": "UK Structural Engineers Declare (SED)",
+    "bullets": [
+      "Uphold signatory commitments by actively promoting climate emergency awareness and sustainable design principles",
+      "Engage with the Structural Sustainability regional representatives (Jack Brunton, Ioana Price, Margaret Hanway and Megan Newson) for guidance on implementing SED principles in client interactions and project delivery",
+      "Embed sustainability thinking as a core consideration in all engineering decisions and recommendations"
+    ]
+  },
+  {
+    "id": 2,
+    "type": "simple",
+    "role": "all",
+    "category": "People & Culture",
+    "title": "Knowledge sharing platform",
+    "bullets": [
+      "Engage regularly with the Structural Sustainability SharePoint site, including the monthly bulletins and themed newsletters, technical resources and sustainability updates",
+      "Contribute project experiences through case studies, lessons learned or technical insights that benefit the broader team"
+    ]
+  },
+  {
+    "id": 3,
+    "type": "simple",
+    "role": "all",
+    "category": "Development",
+    "title": "Continuous development",
+    "bullets": [
+      "Stay current with sustainability developments including new tools, standards and industry best practices",
+      "Participate in training opportunities related to sustainable design, carbon assessment and circular economy principles"
+    ]
+  },
+  {
+    "id": 4,
+    "type": "simple",
+    "role": "all",
+    "category": "Delivery & Operational Excellence",
+    "title": "Eco.Zero™ deployment",
+    "bullets": [
+      "Apply Eco.Zero Concept tool for early-stage (RIBA 0/1) carbon and cost optioneering to influence sustainable design decisions across structural typologies",
+      "For Revit projects, implement Eco.Zero Measure for systematic carbon tracking (mandatory where the design stage fee thresholds are met), enabling identification of carbon hotspots, reporting and benchmarking, and implementation of reduction strategies",
+      "Collaborate with the Structural Sustainability team to effectively deploy Eco.Zero tools and maximise their impact on project sustainability outcomes"
+    ]
+  },
+  {
+    "id": 5,
+    "type": "simple",
+    "role": "all",
+    "category": "Delivery & Operational Excellence",
+    "title": "Structural decarbonisation throughout project lifecycle",
+    "bullets": [
+      "Where Eco.Zero Concept is not applicable, undertake manual optioneering studies and estimate associated carbon using IStructE Structural Carbon Tool or other means",
+      "Monitor and report structural carbon across all design stages, leveraging Eco.Zero Measure as appropriate, to determine a baseline and demonstrate continual reduction throughout the project lifecycle"
+    ]
+  },
+  {
+    "id": 31,
+    "type": "simple",
+    "role": "all",
+    "category": "Delivery & Operational Excellence",
+    "title": "Mandatory actions",
+    "bullets": [
+      "Complete the mandatory actions on your projects, including Eco.Zero Measure and Structural Sustainability reviews where the design stage fee thresholds are met, and keep a record of completed actions so that progress can be tracked on a regional basis",
+      "Check which mandatory actions apply to your project using the Structural Sustainability SharePoint site, and speak to your regional representative if you are unsure"
+    ]
+  },
+  {
+    "id": 32,
+    "type": "simple",
+    "role": "all",
+    "category": "Delivery & Operational Excellence",
+    "title": "Climate change resilience",
+    "bullets": [
+      "Consider climate change resilience in structural design, including how the structure will perform and adapt under future climate conditions, and raise it with clients and project teams from the early design stages",
+      "Design for adaptability and longevity so that resilience is achieved without adding embodied carbon that the project does not need"
+    ]
+  },
+  {
+    "id": 6,
+    "type": "detailed",
+    "role": "director",
+    "category": "People & Culture",
+    "title": "Driving a cultural shift towards sustainable design",
+    "bullets": [
+      "Drive cultural shift towards sustainable service delivery by promoting SED commitments in team meetings, project reviews, and client interactions, tracked through sustainability discussion frequency, team member confidence in sustainability conversations, and integration of sustainable principles into standard project workflows by Q4 FY27",
+      "Establish regular engagement with Structural Sustainability team to embed sustainable thinking into daily engineering decisions, evidenced by monthly consultation records, project sustainability reviews, and demonstrated culture change towards sustainable design as standard practice"
+    ]
+  },
+  {
+    "id": 7,
+    "type": "detailed",
+    "role": "director",
+    "category": "Clients & Growth",
+    "title": "Driving sustainable design leadership and business development in key markets",
+    "bullets": [
+      "Promote early-stage (RIBA 0-1) Structural Sustainability input by championing the value add of Eco.Zero optioneering capabilities in client engagement, measured through increased early-stage project engagement and client recognition of sustainability value by Q4 FY27",
+      "Integrate Structural Sustainability team expertise and Eco.Zero capabilities into bid responses and client proposals, measured through enhanced bid quality, sustainability value propositions, and demonstration of SED commitments in business development activities",
+      "Develop new client relationships by inviting the Structural Sustainability team to present expertise to architects, clients and project teams, evidenced by presentations delivered, resulting project proposals and appointments, and positive client feedback on sustainability advisory services",
+      "Establish reputation for sustainability leadership through consistent application of SED principles and Eco.Zero tools across project portfolio, measured through client testimonials, case study development, and enhanced market positioning for sustainable structural design"
+    ]
+  },
+  {
+    "id": 9,
+    "type": "detailed",
+    "role": "director",
+    "category": "Delivery & Operational Excellence",
+    "title": "Embedding sustainability excellence across operations",
+    "bullets": [
+      "Implement Eco.Zero Measure carbon tracking across the project portfolio to establish an embodied carbon baseline and implement systematic carbon reduction strategies, measured through consistent application of carbon assessment tools, project carbon profiles, case studies and lessons learned by Q4 FY27",
+      "Proactively promote Structural Sustainability reviews across the business and hold project teams to account for completing the actions arising, tracked through review completion and the regional tracking of mandatory actions"
+    ]
+  },
+  {
+    "id": 10,
+    "type": "detailed",
+    "role": "regional_director",
+    "category": "People & Culture",
+    "title": "Leading sustainable design culture change",
+    "bullets": [
+      "Champion SED principles and drive a cultural shift towards sustainability as a core engineering competency within the department by facilitating monthly sustainability discussions, challenging conventional design approaches and promoting SED commitments in project planning, design reviews and professional development conversations, measured through sustainability-focused project decisions and integration into standard departmental processes and procedures by Q4 FY27",
+      "Collaborate regularly with Structural Sustainability team to build department capability in sustainable design thinking, evidenced by consultation frequency, knowledge transfer sessions, and team member confidence in applying sustainable principles to project challenges"
+    ]
+  },
+  {
+    "id": 11,
+    "type": "detailed",
+    "role": "regional_director",
+    "category": "Clients & Growth",
+    "title": "Enhancing client experience through sustainability innovation",
+    "bullets": [
+      "Contribute case studies and technical articles to the Structural Sustainability newsletter showcasing Eco.Zero applications and SED implementation, evidenced by published content and knowledge sharing with broader team",
+      "Lead bid writing and proposals that promote Structural Sustainability credentials through Eco.Zero capabilities and SED principles, measured through enhanced bid quality, sustainability value propositions, and client recognition of carbon optioneering expertise",
+      "Develop client engagement strategies that showcase early-stage sustainability intervention using Eco.Zero optioneering tools, tracked through client feedback, project appointment success, and demonstration of sustainable design value"
+    ]
+  },
+  {
+    "id": 12,
+    "type": "detailed",
+    "role": "regional_director",
+    "category": "Clients & Growth",
+    "title": "Maximising Structural Sustainability team consultation and Eco.Zero use in project delivery",
+    "bullets": [
+      "Facilitate regular Structural Sustainability team consultation on department projects, incorporating Eco.Zero optioneering and Measure tools for enhanced sustainability outcomes, measured through consultation engagement, project carbon performance improvements, and team feedback on collaborative working",
+      "Develop and implement systematic sustainability integration processes for project stages (RIBA 0-6) incorporating Eco.Zero tools and SED principles, evidenced by process documentation, team capability development, and consistent application across applicable projects",
+      "Ensure projects in the department complete the mandatory actions where the thresholds are met, evidenced by completion rates in the regional tracking of mandatory actions"
+    ]
+  },
+  {
+    "id": 13,
+    "type": "detailed",
+    "role": "regional_director",
+    "category": "Delivery & Operational Excellence",
+    "title": "Driving structural carbon excellence and quality",
+    "bullets": [
+      "Improve Eco.Zero Measure carbon assessment quality, consistency and efficiency through enhanced modelling protocols, peer review processes and streamlined carbon tracking workflows, measured through quality assurance procedures, regular model validation checks, process documentation and team feedback on improved assessment procedures by Q3 FY27",
+      "Ensure structural projects demonstrate compliance with SED principles through systematic application of Eco.Zero tools and sustainability review processes, evidenced by project sustainability documentation, carbon performance tracking, and continuous improvement in sustainable design integration",
+      "Proactively promote Structural Sustainability reviews across the department and ensure the actions arising are completed, tracked through review completion and the regional tracking of mandatory actions"
+    ]
+  },
+  {
+    "id": 14,
+    "type": "detailed",
+    "role": "associate_director",
+    "category": "Clients & Growth",
+    "title": "Sustainability leadership",
+    "bullets": [
+      "Champion SED commitments by advocating for sustainable design principles and Eco.Zero optioneering capabilities with clients from project inception (RIBA Stage 0/1), and lead early engagement to involve structural engineering expertise in strategic project decisions such as site selection, building form optimisation and material selection, measured through client engagement in early-stage sustainability discussions, early-stage project appointments and demonstrated application of carbon optioneering tools"
+    ]
+  },
+  {
+    "id": 15,
+    "type": "detailed",
+    "role": "associate_director",
+    "category": "Delivery & Operational Excellence",
+    "title": "Technical excellence & innovation",
+    "bullets": [
+      "Develop structural optioneering strategies using Eco.Zero tools to influence architectural proposals and building briefs with low-carbon solutions, measured through application of carbon optioneering capabilities, documentation of design alternatives, and client adoption of sustainable design recommendations",
+      "Champion circular design principles by integrating reuse of existing assets and minimising virgin material use in structural solutions supported by Eco.Zero Measure analysis, evidenced by project case studies, material efficiency improvements, and contributions to the Structural Sustainability SharePoint site",
+      "Drive whole-life carbon thinking by challenging conventional design approaches and promoting lean design principles through Eco.Zero insights, tracked through design review documentation, sustainable design advocacy, and peer recognition within professional networks",
+      "Proactively promote and engage in Structural Sustainability reviews on your projects, where required under the mandatory actions, and ensure the actions arising are assigned and completed, supporting junior team members to respond, evidenced by reviews held at the required stages and actions closed out"
+    ]
+  },
+  {
+    "id": 16,
+    "type": "detailed",
+    "role": "associate_director",
+    "category": "Development",
+    "title": "Knowledge sharing & thought leadership",
+    "bullets": [
+      "Contribute to the Structural Sustainability SharePoint site by authoring at least one case study, technical note or thought leadership article for the monthly newsletter by Q3 FY27, evidenced by published content, reader engagement metrics, and peer feedback scores",
+      "Engage with broader sustainability community by participating in industry events, conferences or collaborative initiatives that advance Structural Sustainability, measured through event attendance records, speaking engagements, and professional network development aligned with SED objectives"
+    ]
+  },
+  {
+    "id": 17,
+    "type": "detailed",
+    "role": "principal_engineer",
+    "category": "Clients & Growth",
+    "title": "Sustainability leadership",
+    "bullets": [
+      "Champion SED commitments by advocating for sustainable design principles and Eco.Zero optioneering capabilities with clients from project inception (RIBA Stage 0/1), and lead early engagement to involve structural engineering expertise in strategic project decisions such as site selection, building form optimisation and material selection, measured through client engagement in early-stage sustainability discussions, early-stage project appointments and demonstrated application of carbon optioneering tools"
+    ]
+  },
+  {
+    "id": 18,
+    "type": "detailed",
+    "role": "principal_engineer",
+    "category": "Delivery & Operational Excellence",
+    "title": "Technical excellence & innovation",
+    "bullets": [
+      "Develop structural optioneering strategies using Eco.Zero tools to influence architectural proposals and building briefs with low-carbon solutions, measured through application of carbon optioneering capabilities, documentation of design alternatives, and client adoption of sustainable design recommendations",
+      "Champion circular design principles by integrating reuse of existing assets and minimising virgin material use in structural solutions supported by Eco.Zero Measure analysis, evidenced by project case studies, material efficiency improvements, and contributions to the Structural Sustainability SharePoint site",
+      "Drive whole-life carbon thinking by challenging conventional design approaches and promoting lean design principles through Eco.Zero insights, tracked through design review documentation, sustainable design advocacy, and peer recognition within professional networks",
+      "Proactively promote and engage in Structural Sustainability reviews on your projects, where required under the mandatory actions, and ensure the actions arising are assigned and completed, supporting junior team members to respond, evidenced by reviews held at the required stages and actions closed out",
+      "Use the Structural Sustainability master specifications on your projects and encourage their use by the project team, challenging departures that increase embodied carbon, evidenced by the specifications being applied at the relevant design stages and feedback shared for future updates"
+    ]
+  },
+  {
+    "id": 19,
+    "type": "detailed",
+    "role": "principal_engineer",
+    "category": "Development",
+    "title": "Knowledge sharing & thought leadership",
+    "bullets": [
+      "Contribute to the Structural Sustainability SharePoint site by authoring at least one case study, technical note or thought leadership article for the monthly newsletter by Q3 FY27, evidenced by published content, reader engagement metrics, and peer feedback scores",
+      "Engage with broader sustainability community by participating in industry events, conferences or collaborative initiatives that advance Structural Sustainability, measured through event attendance records, speaking engagements, and professional network development aligned with SED objectives"
+    ]
+  },
+  {
+    "id": 20,
+    "type": "detailed",
+    "role": "senior_engineer",
+    "category": "Delivery & Operational Excellence",
+    "title": "Project delivery excellence",
+    "bullets": [
+      "Apply SED principles consistently across project work by challenging design briefs and proposing sustainable alternatives using Eco.Zero insights, measured through project sustainability considerations, design review participation, and documented sustainable design interventions",
+      "Promote early-stage sustainability input by advocating for structural engineering involvement in RIBA Stages 0-1 and showcasing Eco.Zero optioneering capabilities, tracked through early-stage project engagement, sustainability discussion participation, and demonstration of carbon optioneering value",
+      "Proactively promote and engage in Structural Sustainability reviews on your projects, where required under the mandatory actions, and ensure the actions arising are assigned and completed, evidenced by reviews held at the required stages and actions closed out",
+      "Use the Structural Sustainability master specifications on your projects and encourage their use by the project team, challenging departures that increase embodied carbon, evidenced by the specifications being applied at the relevant design stages and feedback shared for future updates"
+    ]
+  },
+  {
+    "id": 21,
+    "type": "detailed",
+    "role": "senior_engineer",
+    "category": "Development",
+    "title": "Technical development",
+    "bullets": [
+      "Master sustainable design tools including proficient use of Eco.Zero optioneering and Measure tools for structural carbon assessment and design optimisation, evidenced by tool application in projects, competency development, and peer collaboration in sustainable design approaches",
+      "Develop circular design expertise by incorporating material reuse strategies and design for disassembly principles supported by Eco.Zero analysis, measured through project case studies, material efficiency considerations, and knowledge sharing contributions to team learning",
+      "Enhance whole-life carbon knowledge through understanding of manufacturing processes, material impacts and end-of-life considerations using Eco.Zero insights, tracked through CPD engagement, assessment understanding, and practical application in project work"
+    ]
+  },
+  {
+    "id": 22,
+    "type": "detailed",
+    "role": "senior_engineer",
+    "category": "People & Culture",
+    "title": "Collaboration & communication",
+    "bullets": [
+      "Support knowledge transfer by participating in internal sustainability discussions and sharing best practices in Eco.Zero application and SED implementation, evidenced by meeting participation, documented knowledge sharing, and peer support in sustainable design approaches"
+    ]
+  },
+  {
+    "id": 23,
+    "type": "detailed",
+    "role": "engineer",
+    "category": "Delivery & Operational Excellence",
+    "title": "Project delivery excellence",
+    "bullets": [
+      "Apply SED principles consistently across project work by challenging design briefs and proposing sustainable alternatives using Eco.Zero insights, measured through project sustainability considerations, design review participation, and documented sustainable design interventions",
+      "Promote early-stage sustainability input by advocating for structural engineering involvement in RIBA Stages 0-1 and showcasing Eco.Zero optioneering capabilities, tracked through early-stage project engagement, sustainability discussion participation, and demonstration of carbon optioneering value",
+      "Participate in Structural Sustainability reviews on your projects, where required under the mandatory actions, and complete the actions arising from them, evidenced by review participation and actions closed out within agreed timescales",
+      "Use the Structural Sustainability master specifications on your projects, raising any questions or proposed departures with your regional representative, evidenced by the specifications being applied at the relevant design stages and feedback shared for future updates"
+    ]
+  },
+  {
+    "id": 24,
+    "type": "detailed",
+    "role": "engineer",
+    "category": "Development",
+    "title": "Technical development",
+    "bullets": [
+      "Master sustainable design tools including proficient use of Eco.Zero optioneering and Measure tools for structural carbon assessment and design optimisation, evidenced by tool application in projects, competency development, and peer collaboration in sustainable design approaches",
+      "Develop circular design expertise by incorporating material reuse strategies and design for disassembly principles supported by Eco.Zero analysis, measured through project case studies, material efficiency considerations, and knowledge sharing contributions to team learning",
+      "Enhance whole-life carbon knowledge through understanding of manufacturing processes, material impacts and end-of-life considerations using Eco.Zero insights, tracked through CPD engagement, assessment understanding, and practical application in project work"
+    ]
+  },
+  {
+    "id": 25,
+    "type": "detailed",
+    "role": "engineer",
+    "category": "People & Culture",
+    "title": "Collaboration & communication",
+    "bullets": [
+      "Support knowledge transfer by participating in internal sustainability discussions and sharing best practices in Eco.Zero application and SED implementation, evidenced by meeting participation, documented knowledge sharing, and peer support in sustainable design approaches"
+    ]
+  },
+  {
+    "id": 26,
+    "type": "detailed",
+    "role": "graduate_engineer",
+    "category": "Development",
+    "title": "Core sustainability application",
+    "bullets": [
+      "Apply SED principles in daily project work by understanding sustainability requirements and contributing to sustainable design solutions using Eco.Zero tools, measured through project participation, sustainability task completion, and supervisor feedback on sustainable design understanding",
+      "Support carbon tracking activities using Eco.Zero Measure under supervision to develop understanding of embodied carbon assessment, evidenced by training engagement, successful tool application, and progressive skill development in carbon assessment techniques",
+      "Participate in Structural Sustainability reviews on your projects, where required under the mandatory actions, and complete the actions arising from them with supervisor support, evidenced by review participation and actions closed out within agreed timescales",
+      "Use the Structural Sustainability master specifications on your projects, raising any questions or proposed departures with your regional representative, evidenced by the specifications being applied at the relevant design stages and feedback shared for future updates"
+    ]
+  },
+  {
+    "id": 27,
+    "type": "detailed",
+    "role": "graduate_engineer",
+    "category": "Development",
+    "title": "Skill development",
+    "bullets": [
+      "Build sustainable design competency by learning to use Eco.Zero tools and understanding their application in project delivery, evidenced by tool training engagement, practical application in supervised projects, and competency development in carbon optioneering and assessment",
+      "Understand circular design concepts including material reuse, recycling and design for disassembly principles supported by Eco.Zero insights, measured through learning engagement, knowledge development, and practical application in assigned project tasks",
+      "Develop sustainability knowledge by accessing learning materials, case studies and technical guidance on the Structural Sustainability SharePoint site, delivering or attending CPD events (internal or external), and completing Eco.Zero tool training, tracked through platform engagement, session attendance and learning objective completion"
+    ]
+  },
+  {
+    "id": 29,
+    "type": "detailed",
+    "role": "technician",
+    "category": "Delivery & Operational Excellence",
+    "title": "Eco.Zero Measure excellence",
+    "bullets": [
+      "Master Eco.Zero Measure protocols including accurate element classification, appropriate rebar rate inputs and correct material property assignments, evidenced by quality performance, peer review feedback, and consistent delivery of reliable carbon data across all assigned projects",
+      "Support project teams by providing timely and accurate model data, using eco.zero.panel, that enables carbon estimation, tracked through delivery timeframes, data quality feedback, and positive feedback from engineering teams on data quality and usefulness"
+    ]
+  },
+  {
+    "id": 30,
+    "type": "detailed",
+    "role": "technician",
+    "category": "Development",
+    "title": "Continuous improvement",
+    "bullets": [
+      "Engage with the Structural Sustainability SharePoint site to access technical guidance, best practices and latest sustainability protocols, measured through regular platform engagement, resource utilisation tracking, and application of new knowledge in project work",
+      "Develop sustainability awareness by understanding how modelling decisions impact carbon performance and sustainability outcomes, evidenced by completion of sustainability training activities, assessment understanding, and demonstrated understanding in project applications"
+    ]
+  }
 ]
